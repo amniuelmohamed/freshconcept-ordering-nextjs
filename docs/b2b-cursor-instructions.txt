@@ -1,0 +1,710 @@
+# Complete Cursor Instructions - B2B Wholesale Ordering Platform
+
+## Project Context
+
+You are building a B2B wholesale food distribution platform. This is a multi-tenant system where:
+
+**Business Model:**
+- Employees manage the platform (products, clients, orders)
+- Clients (restaurants, supermarkets, etc.) place orders through the platform
+- Different client types see different products (role-based visibility)
+- Products are mostly sold by weight (kg) with variable pricing
+- Clients get personalized discounts
+- Delivery schedules are fixed per client (e.g., every Monday and Thursday)
+
+**Key Business Rules:**
+1. **No self-registration**: Only employees can create client and employee accounts
+2. **Role-based product catalog**: Supermarkets see wholesale products, restaurants see restaurant products
+3. **Dynamic pricing**: Each client has a discount percentage applied to base prices
+4. **Estimated totals**: Since products are sold by weight, totals are estimates until actual weighing
+5. **Fixed delivery schedules**: Each client has specific delivery days (e.g., Monday, Wednesday, Friday)
+6. **Order cutoff times**: Orders must be placed before a cutoff time (e.g., 8 AM the day before delivery)
+
+---
+
+## Database Schema (Already Created in Supabase)
+
+**Important: The database schema, RLS policies, triggers, and indexes are ALREADY FULLY CONFIGURED in Supabase. You don't need to create or modify the database. Just query it.**
+
+### Tables Overview:
+
+**settings**: Platform configuration (VAT rate, cutoff times, available languages)
+
+**client_roles**: Dynamic role definitions (e.g., "Supermarket", "Restaurant")
+- `name`: JSONB with translations `{fr: string, nl: string, en: string}`
+- `slug`: Text identifier used in product visibility (e.g., "supermarket")
+- `default_delivery_days`: Array of day names ["Monday", "Wednesday", "Friday"]
+
+**employee_roles**: Staff roles with permissions
+- `name`: JSONB with translations
+- `permissions`: JSONB object `{manage_products: true, view_orders: true, ...}`
+
+**clients**: Customer profiles (linked to auth.users)
+- `id`: References auth.users(id)
+- `client_role_id`: Which role type (supermarket, restaurant, etc.)
+- `company_name`, `contact_name`, `contact_email`, `contact_phone`, `contact_mobile`
+- `delivery_days`: Array override of default delivery days
+- `remise`: Discount percentage (e.g., 20.00 means 20% discount)
+- `preferred_locale`: Client's language preference ('fr', 'nl', 'en')
+
+**employees**: Staff profiles (linked to auth.users)
+- `id`: References auth.users(id)
+- `employee_role_id`: Which employee role
+- `full_name`: Display name
+
+**categories**: Product categories
+- `name`: JSONB with translations
+
+**products**: Product catalog
+- `sku`: Product code
+- `name`: JSONB with translations
+- `description`: JSONB with translations
+- `category_id`: Foreign key to categories
+- `base_price`: Price per unit (NUMERIC)
+- `unit`: Text like 'kg', 'piece', 'box', 'bunch'
+- `approximate_weight`: Nullable NUMERIC (for items sold by piece but priced by weight)
+- `image_url`: Product photo URL
+- `visible_to`: JSONB array of role slugs `['supermarket', 'restaurant']` (empty array = visible to all)
+- `active`: Boolean
+
+**orders**: Order headers
+- `client_id`: Foreign key to clients
+- `status`: 'pending', 'confirmed', 'shipped', 'delivered', 'cancelled'
+- `delivery_date`: DATE
+- `estimated_total`: Calculated by trigger from order_items
+- `final_total`: Nullable, set after actual weighing
+- `notes`: Text
+
+**order_items**: Order line items
+- `order_id`: Foreign key to orders
+- `product_id`: Foreign key to products
+- `product_name`: Snapshot of name at order time (in client's language)
+- `quantity`: NUMERIC
+- `unit_price`: Price snapshot (base_price with discount applied)
+- `subtotal`: Auto-calculated by trigger (quantity × unit_price)
+
+**favorites**: Client's favorited products
+- `client_id`, `product_id`: Composite unique key
+
+### Critical Database Behaviors (Already Implemented via Triggers):
+
+**DO NOT implement these in your code - they happen automatically:**
+
+1. **Subtotal calculation**: When you insert an order_item, `subtotal` is automatically calculated
+2. **Order total update**: When order_items change, `orders.estimated_total` updates automatically
+3. **Product snapshot**: When inserting order_item, `product_name` and `unit_price` are auto-filled from current product data with client's discount applied
+4. **Timestamp updates**: `updated_at` columns update automatically
+5. **Order protection**: Cannot modify order_items if order status is not 'pending' (database will reject)
+
+### Row Level Security (RLS):
+
+**Already configured. Your queries will automatically be filtered:**
+
+1. **Clients see only**:
+   - Their own profile, orders, order_items, favorites
+   - Products where `active=true` AND (`visible_to=[]` OR `visible_to` contains their role slug)
+   - All categories, client_roles, settings
+
+2. **Employees see**:
+   - Everything, based on their permissions
+   - Permission checks happen via `public.has_permission('permission_name')` function
+
+3. **What this means for you**:
+   - Just query `SELECT * FROM products` - RLS filters automatically
+   - Don't add WHERE clauses for `active` or `visible_to` - it's redundant
+   - Don't worry about data leakage - clients can't see other clients' data
+
+---
+
+## Tech Stack Requirements
+
+**Framework:**
+- Next.js 16.0.1 (latest from npm)
+- React 19
+- TypeScript with strict mode enabled
+- App Router (not Pages Router)
+
+**Styling:**
+- Tailwind CSS
+- shadcn/ui components (install as needed)
+
+**Backend:**
+- Supabase for auth and database
+- Use `@supabase/ssr` for proper cookie handling
+- NEVER use service_role key in client-side code
+
+**Internationalization:**
+- next-intl for multi-language support
+- Support French (default), Dutch, English
+- All product names/descriptions are JSONB: `{fr: string, nl: string, en: string}`
+
+**State Management:**
+- React Context or Zustand for cart state
+- localStorage for user preferences (view mode, column visibility)
+
+**Forms:**
+- React Hook Form
+- Zod for validation
+
+---
+
+## Authentication Flow
+
+**Important: NO public registration pages. Only employee-initiated account creation.**
+
+### User Types:
+1. **Clients**: Customers who place orders
+2. **Employees**: Staff who manage the platform
+
+### Account Creation Process:
+
+**For Clients:**
+1. Employee (with `manage_clients` permission) fills form: email, company name, contact info, client role, discount, delivery days
+2. Backend creates user in `auth.users` using Supabase Admin API
+3. Backend creates profile in `clients` table
+4. System sends password setup email to client
+5. Client clicks link, sets password, can then login
+
+**For Employees:**
+1. Employee (with `manage_employees` permission) fills form: email, full name, employee role
+2. Backend creates user in `auth.users` using Supabase Admin API
+3. Backend creates profile in `employees` table
+4. System sends password setup email
+5. New employee clicks link, sets password, can login
+
+### Login Process:
+1. Single login page (email + password)
+2. After successful login, check if user exists in `clients` or `employees` table
+3. Redirect to appropriate dashboard:
+   - Client → `/[locale]/(client)/dashboard`
+   - Employee → `/[locale]/(employee)/dashboard`
+
+### What to Build:
+- `/[locale]/(auth)/login` page
+- Employee pages for creating clients (`/[locale]/(employee)/clients/new`)
+- Employee pages for creating employees (`/[locale]/(employee)/employees/new`)
+- Do NOT create `/register` routes
+
+---
+
+## Core Feature: Quick Order Form
+
+**This is the most important feature. Clients use this to place orders.**
+
+### Two View Modes:
+
+**1. Grid View (default):**
+- Responsive grid of product cards (1 col mobile, 2-3 tablet, 3-4 desktop)
+- Each card shows:
+  - Product image
+  - Product name (in client's locale from `name.fr`, `name.nl`, or `name.en`)
+  - Price: `base_price * (1 - client.remise / 100)` formatted as €X.XX / unit
+  - Unit from database (kg, piece, box, etc.)
+  - If `approximate_weight` exists: show "≈X kg • Est. €XX.XX"
+  - Quantity stepper: [-] [input] [+] buttons
+  - Subtotal below: quantity × price
+- Good for browsing, mobile-friendly
+
+**2. Table View:**
+- Compact table with sortable columns
+- Sticky header when scrolling
+- Columns (toggle-able via dropdown):
+  - **Always visible**: Product Name, Price, Quantity Input
+  - **Default visible**: SKU, Category, Unit
+  - **Default hidden**: Approximate Weight, Order History columns
+- Last 3 orders columns: "Order -1", "Order -2", "Order -3"
+  - Shows quantity from that past order
+  - Click on quantity → fills that product's quantity input
+  - Tooltip on hover shows order date
+  - "Copy Order -X" button above table fills ALL products from that order
+- Good for bulk ordering, keyboard navigation (Tab between inputs)
+- On mobile: allow horizontal scroll OR force grid view (your choice)
+
+### Shared Features (both views):
+
+**Toggle buttons:**
+- [Grid View] [Table View] - switches layout
+- [Favorites] [All Products] - filters products
+- View mode saved to localStorage
+
+**Search & Filters:**
+- Search input (searches product name in current locale)
+- Category filter tabs or dropdown
+- Search and filters apply to both views
+
+**Cart behavior:**
+- State stored in memory (React Context or Zustand)
+- Also persist to localStorage (survive page refresh)
+- When client types quantity: debounce 500ms, then update cart automatically (no "Add to Cart" button needed)
+- Quantities persist when switching between Grid/Table or Favorites/All views
+- Show live cart summary: "X products • €XXX.XX estimated"
+
+**Sticky footer:**
+- Fixed at bottom of screen
+- Shows: product count, estimated total
+- Buttons: [Clear All] [Review Order]
+
+### Order History Integration:
+
+**Fetch last 3 orders for current client:**
+```
+Query orders table:
+- WHERE client_id = current_user_id
+- ORDER BY created_at DESC
+- LIMIT 3
+- Include order_items
+
+Build map: { productId: quantity } for each order
+Pass to component as order1, order2, order3
+```
+
+**Quick-fill features:**
+- Click quantity in "Order -1" column → sets that product's quantity
+- "Copy Order -1" button → loads all products/quantities from that order into cart
+- Show success message: "✓ Loaded 12 products from Order #1234"
+
+### Column Visibility (Table View Only):
+
+- "Columns" dropdown menu with checkboxes
+- User can show/hide: SKU, Category, Unit, Approximate Weight, Order -1, Order -2, Order -3
+- Product Name, Price, Quantity always visible (can't be hidden)
+- Save preferences to localStorage: `tableColumns: {sku: true, category: true, ...}`
+
+---
+
+## Delivery Date Calculation
+
+**DO NOT let client choose delivery date. It's calculated automatically.**
+
+### Logic:
+
+1. Fetch from `settings` table:
+   - `order_cutoff_time`: e.g., "08:00"
+   - `order_cutoff_day_offset`: e.g., 1 (means cutoff is 1 day before delivery)
+
+2. Fetch client's `delivery_days`: e.g., ["Monday", "Wednesday", "Friday"]
+
+3. Calculate next available delivery date:
+   - Find next date that matches one of client's delivery days
+   - Check if cutoff deadline has passed
+   - Cutoff = (delivery_date - offset days) at cutoff_time
+   - If now > cutoff, skip to next matching delivery day
+   - Example: Delivery on Friday, cutoff Thursday 8 AM
+     - If today is Wednesday 10 AM → Show Friday (cutoff not passed)
+     - If today is Thursday 9 AM → Show next Friday (cutoff passed)
+
+4. Display: "Your next delivery: Wednesday, November 13, 2024"
+
+### Where to Show:
+- On Quick Order form (before checkout)
+- In order confirmation
+- On dashboard
+
+### Implementation:
+Create a utility function in `/lib/utils/delivery.ts` that takes delivery_days, cutoff_time, cutoff_day_offset and returns next delivery Date. Use date-fns library for date manipulation.
+
+---
+
+## Pricing Display Rules
+
+**CRITICAL: Always display prices exactly as stored in database.**
+
+### How to Display Prices:
+
+1. **Fetch product's `base_price`** (e.g., 18.50)
+2. **Fetch client's `remise`** (e.g., 20.00 meaning 20% discount)
+3. **Calculate discounted price**: `base_price * (1 - remise / 100)` = 18.50 × 0.80 = 14.80
+4. **Display**: "€14.80 / kg" (or whatever unit is in database)
+
+**DO NOT:**
+- Convert units (don't show "€4.44 per 300g" if database has "per kg")
+- Show base price to clients (they should only see their discounted price)
+- Round prices incorrectly (use 2 decimal places for EUR)
+
+**For products with `approximate_weight`:**
+```
+Whole Salmon (≈3.5 kg)
+€14.80 / kg
+Estimated: €51.80
+```
+
+---
+
+## Reorder Feature
+
+**Clients can duplicate past orders to quickly reorder.**
+
+### Where to Add:
+
+**Primary: Order History Page**
+- Each order row has a "Reorder" button
+- Click → Shows confirmation modal: "This will replace current cart items. Continue?"
+- On confirm:
+  - Load all order_items from that order
+  - Map to current products (fetch fresh product data, use CURRENT prices, not historical)
+  - Fill cart with quantities from that order
+  - Navigate to Quick Order form
+  - Show toast: "✓ Loaded 12 products from Order #1234"
+
+**Secondary: Quick Order Page (Optional)**
+- Dropdown above form: "Quick reorder from past orders"
+- Shows last 10 orders
+- Select one → same flow as above
+
+**Important:**
+- Use CURRENT product prices (not historical prices from order_items)
+- Apply client's CURRENT discount
+- If a product no longer exists or is inactive, skip it with a warning
+
+---
+
+## Order Workflow
+
+### Order Creation (Client):
+
+1. Client fills Quick Order form (adds quantities)
+2. Clicks "Review Order"
+3. Review page shows:
+   - List of products with quantities and prices
+   - Calculated next delivery date (not editable)
+   - Optional notes textarea
+   - Estimated total with disclaimer: "Final amount will be adjusted based on actual weight at delivery"
+4. Click "Place Order"
+5. Backend creates order:
+   - Insert into `orders`: client_id, status='pending', delivery_date (calculated), notes
+   - Insert into `order_items`: For each cart item, insert with product_id, quantity
+   - Triggers automatically fill: product_name (in client's locale), unit_price (with discount), subtotal, and order.estimated_total
+6. Clear cart
+7. Redirect to order confirmation page
+8. Show success message
+
+### Order Management (Employee):
+
+**View all orders:**
+- Table with filters: status, date range, client
+- Show: order number, client, date, delivery date, status, estimated total
+- Click row → view details
+
+**Order details:**
+- Client info
+- Products ordered (name, quantity, unit price, subtotal)
+- Status timeline
+- Update status dropdown: pending → confirmed → shipped → delivered
+- Edit final_total (after actual weighing)
+- Add/edit notes
+- Cancel order (if status = pending)
+
+**Status updates:**
+- Only employees can change order status
+- Status changes should be logged (create activity log table or just use updated_at)
+
+---
+
+## Mobile Considerations
+
+**Grid View:**
+- Works perfectly on mobile (1 column, vertical scroll)
+- Large touch targets for quantity buttons
+
+**Table View:**
+- Default to Grid View on mobile (< 768px)
+- If showing table on mobile:
+  - Enable horizontal scroll
+  - Sticky first column (product name)
+  - Show tip: "💡 Grid view recommended for mobile"
+  - Column visibility menu lets users hide columns they don't need
+
+**Navigation:**
+- Hamburger menu on mobile
+- Bottom navigation bar (optional)
+
+---
+
+## Folder Structure
+
+```
+/app
+  /[locale]
+    /(auth)
+      /login
+        page.tsx
+    /(client)
+      /dashboard
+        page.tsx
+      /quick-order
+        page.tsx
+      /orders
+        page.tsx
+        /[id]
+          page.tsx
+      /favorites
+        page.tsx
+      /profile
+        page.tsx
+      layout.tsx
+    /(employee)
+      /dashboard
+        page.tsx
+      /clients
+        page.tsx
+        /[id]
+          page.tsx
+        /new
+          page.tsx
+      /products
+        page.tsx
+        /[id]
+          page.tsx
+        /new
+          page.tsx
+      /orders
+        page.tsx
+        /[id]
+          page.tsx
+      /categories
+        page.tsx
+      /employees
+        page.tsx
+        /new
+          page.tsx
+      /settings
+        page.tsx
+      layout.tsx
+    layout.tsx
+    page.tsx
+  /api
+    /auth
+      /callback
+        route.ts
+/components
+  /ui (shadcn components)
+  /client
+    (QuickOrderForm, ProductGrid, ProductTable, etc.)
+  /employee
+    (ProductManager, ClientManager, OrderManager, etc.)
+  /shared
+    (LanguageSwitcher, Navigation, etc.)
+/lib
+  /supabase
+    /client.ts
+    /server.ts
+    /middleware.ts
+  /utils
+    /delivery.ts
+    /pricing.ts
+    /helpers.ts
+  /validations
+    /schemas.ts
+  /store
+    /cart.ts (or use Context)
+/types
+  /database.ts
+  /supabase.ts
+/messages
+  /fr.json
+  /nl.json
+  /en.json
+/middleware.ts
+/i18n/routing.ts
+```
+
+---
+
+## Key Implementation Guidelines
+
+### 1. Supabase Client Usage:
+
+**Client Components:**
+```typescript
+import { createClient } from '@/lib/supabase/client';
+const supabase = createClient();
+```
+
+**Server Components/Actions:**
+```typescript
+import { createClient } from '@/lib/supabase/server';
+const supabase = await createClient();
+```
+
+**Never:**
+- Use service_role key in client-side code
+- Bypass RLS policies
+- Store sensitive data in localStorage
+
+### 2. TypeScript Types:
+
+Create comprehensive types in `/types/database.ts`:
+- All table types
+- JSONB field types (TranslatedText for name/description)
+- Extended types (ProductWithCategory, OrderWithItems, etc.)
+- Use Database['public']['Tables']['table_name']['Row'] pattern
+
+### 3. Multi-language Handling:
+
+**Product names/descriptions:**
+```typescript
+// Get client's locale
+const locale = client.preferred_locale; // 'fr', 'nl', 'en'
+
+// Display product name
+const productName = product.name[locale]; // accesses JSONB field
+
+// Fallback if translation missing
+const displayName = product.name[locale] || product.name.fr;
+```
+
+**UI translations:**
+Use next-intl's `useTranslations()` hook for all UI text.
+
+### 4. Query Patterns:
+
+**DON'T add redundant WHERE clauses:**
+```typescript
+// ❌ WRONG - redundant (RLS already filters)
+const { data } = await supabase
+  .from('products')
+  .select('*')
+  .eq('active', true); // RLS already does this for clients
+
+// ✅ CORRECT - let RLS handle filtering
+const { data } = await supabase
+  .from('products')
+  .select('*');
+```
+
+**DO add business logic filters:**
+```typescript
+// ✅ CORRECT - filtering by category is business logic
+const { data } = await supabase
+  .from('products')
+  .select('*, category:categories(*)')
+  .eq('category_id', categoryId);
+```
+
+### 5. Cart State:
+
+- Use Zustand or React Context
+- Persist to localStorage (survive refresh)
+- Store: Map<productId, CartItem>
+- CartItem includes: product, quantity, unitPrice, subtotal
+- Debounce updates (500ms) when user types quantities
+- Clear cart after successful order
+
+### 6. Error Handling:
+
+- Show user-friendly error messages in their language
+- Log errors to console (dev) or error tracking service (prod)
+- Handle Supabase errors gracefully
+- Show loading states during async operations
+- Use toast notifications for success/error feedback
+
+### 7. Performance:
+
+- Use Next.js Image component for product images
+- Implement pagination for product lists (20-50 per page)
+- Use React Suspense for data fetching
+- Add loading skeletons
+- Debounce search inputs
+- Use server components where possible (less JavaScript to client)
+
+### 8. Accessibility:
+
+- All forms have proper labels
+- Keyboard navigation works
+- Focus management in dialogs
+- ARIA attributes for screen readers
+- Sufficient color contrast
+- Touch targets minimum 44×44px on mobile
+
+---
+
+## What NOT to Do
+
+❌ Don't create database migrations or modify schema
+❌ Don't bypass RLS policies
+❌ Don't use service_role key in client code
+❌ Don't store passwords or sensitive data in localStorage
+❌ Don't create public registration pages
+❌ Don't add WHERE clauses for `active` or `visible_to` on products (RLS handles it)
+❌ Don't convert price units (always show database unit)
+❌ Don't let clients edit their discount or role
+❌ Don't allow editing orders after status changes from 'pending'
+❌ Don't forget to apply client discount when showing prices
+❌ Don't show base prices to clients (only discounted prices)
+
+---
+
+## Development Phases
+
+**Phase 1: Foundation (Week 1)**
+- Project setup, dependencies
+- Supabase integration
+- Authentication pages (login only)
+- Middleware and route protection
+- Basic layouts and navigation
+- Internationalization setup
+
+**Phase 2: Client Features (Week 2)**
+- Client dashboard
+- Quick Order form (both Grid and Table views)
+- Cart functionality
+- Order creation and checkout
+- Order history and details
+
+**Phase 3: Employee Features (Week 3)**
+- Employee dashboard
+- Client management (CRUD)
+- Product management (CRUD)
+- Order management
+- View order details, update status
+
+**Phase 4: Advanced Features (Week 4)**
+- Favorites system
+- Reorder functionality
+- Order history in table view
+- Column visibility toggle
+- Profile pages
+- Settings management
+
+**Phase 5: Polish (Week 5)**
+- Mobile optimization
+- Loading states and skeletons
+- Error handling
+- Toast notifications
+- Performance optimization
+- Accessibility improvements
+- Testing and bug fixes
+
+---
+
+## Testing Checklist
+
+**Before deploying:**
+- [ ] Login works for both clients and employees
+- [ ] Clients see only products visible to their role
+- [ ] Prices show with client discount applied
+- [ ] Cart persists across page refreshes
+- [ ] Quantities persist when switching Grid/Table views
+- [ ] Order creation works end-to-end
+- [ ] Delivery date calculation is correct
+- [ ] Reorder loads past order correctly
+- [ ] Employees can manage clients/products/orders
+- [ ] Permission checks work (try actions without permission)
+- [ ] Multi-language switching works
+- [ ] Mobile responsive
+- [ ] No console errors
+- [ ] Fast page loads
+
+---
+
+## Final Notes
+
+**Remember:**
+- Database schema is DONE - just query it
+- RLS policies are CONFIGURED - trust them
+- Triggers handle calculations - don't duplicate logic
+- Focus on building a great UX
+- Ask if anything is unclear about the business logic
+- The Quick Order form is the core feature - make it excellent
+
+Good luck! 🚀
