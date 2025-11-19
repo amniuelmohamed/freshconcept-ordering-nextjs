@@ -57,7 +57,20 @@ export function LoginForm({ locale }: { locale: Locale }) {
             setErrorMessage(t("errors.unknown"));
           }
         }
-      } catch {
+        // If result is undefined, it means redirect() was called (successful login)
+        // redirect() throws a special exception that Next.js handles, so we don't need to do anything
+      } catch (error) {
+        // Check if this is a Next.js redirect exception
+        // Next.js redirect() throws an error with a specific digest
+        if (error && typeof error === "object" && "digest" in error) {
+          const nextError = error as { digest?: string };
+          // NEXT_REDIRECT is the digest for redirect exceptions
+          if (nextError.digest?.startsWith("NEXT_REDIRECT")) {
+            // This is a redirect, let it propagate - don't show error
+            throw error;
+          }
+        }
+        // Only show error for actual errors, not redirects
         setErrorMessage(t("errors.unknown"));
       }
     });
