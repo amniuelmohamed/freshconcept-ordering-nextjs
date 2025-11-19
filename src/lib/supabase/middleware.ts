@@ -48,11 +48,13 @@ export async function updateSession(
   const { data: { session } } = await supabase.auth.getSession();
   const user = session?.user;
 
-  if (
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth")
-  ) {
+  // Allow public access to login, auth, and manifest files
+  const publicPaths = ["/login", "/auth", "/manifest", "/manifest.webmanifest"];
+  const isPublicPath = publicPaths.some((path) =>
+    request.nextUrl.pathname.startsWith(path)
+  );
+
+  if (!user && !isPublicPath) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);
