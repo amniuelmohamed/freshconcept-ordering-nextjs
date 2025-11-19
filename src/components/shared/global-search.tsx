@@ -36,12 +36,18 @@ interface GlobalSearchProps {
 }
 
 export function GlobalSearch({ locale, userType }: GlobalSearchProps) {
+  const [mounted, setMounted] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState("");
   const [results, setResults] = React.useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const router = useRouter();
   const t = useTranslations("search");
+
+  // Only render dialog after mount to avoid hydration mismatch
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Keyboard shortcut (Cmd+K or Ctrl+K)
   React.useEffect(() => {
@@ -128,55 +134,57 @@ export function GlobalSearch({ locale, userType }: GlobalSearchProps) {
         </kbd>
       </motion.button>
 
-      <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput
-          placeholder={t("searchPlaceholder")}
-          value={searchQuery}
-          onValueChange={setSearchQuery}
-        />
-        <CommandList>
-          {isLoading ? (
-            <div className="py-6 text-center text-sm text-muted-foreground">
-              {t("searching")}...
-            </div>
-          ) : searchQuery.length < 2 ? (
-            <CommandEmpty>{t("typeToSearch")}</CommandEmpty>
-          ) : results.length === 0 ? (
-            <CommandEmpty>{t("noResults")}</CommandEmpty>
-          ) : (
-            <>
-              {Object.entries(groupedResults).map(([type, items]) => (
-                <CommandGroup key={type} heading={t(`types.${type}`)}>
-                  {items.map((result) => (
-                    <CommandItem
-                      key={result.id}
-                      value={result.title}
-                      onSelect={() => handleSelect(result.href)}
-                      className="cursor-pointer"
-                    >
-                      <motion.div
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="flex items-center gap-2"
+      {mounted && (
+        <CommandDialog open={open} onOpenChange={setOpen}>
+          <CommandInput
+            placeholder={t("searchPlaceholder")}
+            value={searchQuery}
+            onValueChange={setSearchQuery}
+          />
+          <CommandList>
+            {isLoading ? (
+              <div className="py-6 text-center text-sm text-muted-foreground">
+                {t("searching")}...
+              </div>
+            ) : searchQuery.length < 2 ? (
+              <CommandEmpty>{t("typeToSearch")}</CommandEmpty>
+            ) : results.length === 0 ? (
+              <CommandEmpty>{t("noResults")}</CommandEmpty>
+            ) : (
+              <>
+                {Object.entries(groupedResults).map(([type, items]) => (
+                  <CommandGroup key={type} heading={t(`types.${type}`)}>
+                    {items.map((result) => (
+                      <CommandItem
+                        key={result.id}
+                        value={result.title}
+                        onSelect={() => handleSelect(result.href)}
+                        className="cursor-pointer"
                       >
-                        {getIcon(result.type)}
-                        <div className="flex flex-col">
-                          <span>{result.title}</span>
-                          {result.subtitle && (
-                            <span className="text-xs text-muted-foreground">
-                              {result.subtitle}
-                            </span>
-                          )}
-                        </div>
-                      </motion.div>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              ))}
-            </>
-          )}
-        </CommandList>
-      </CommandDialog>
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          className="flex items-center gap-2"
+                        >
+                          {getIcon(result.type)}
+                          <div className="flex flex-col">
+                            <span>{result.title}</span>
+                            {result.subtitle && (
+                              <span className="text-xs text-muted-foreground">
+                                {result.subtitle}
+                              </span>
+                            )}
+                          </div>
+                        </motion.div>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                ))}
+              </>
+            )}
+          </CommandList>
+        </CommandDialog>
+      )}
     </>
   );
 }

@@ -15,7 +15,12 @@ export function PrintOrderButton() {
   }, []);
 
   return (
-    <Button variant="outline" size="sm" onClick={handlePrint}>
+    <Button 
+      variant="outline" 
+      size="sm" 
+      onClick={handlePrint}
+      className="w-full sm:w-auto"
+    >
       {t("print")}
     </Button>
   );

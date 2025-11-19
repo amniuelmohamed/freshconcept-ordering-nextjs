@@ -55,7 +55,7 @@ async function OrderDetailContent({ locale, id }: { locale: Locale; id: string }
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-semibold text-foreground">
             {t("detail.title", { orderId: id.slice(0, 8) })}
@@ -64,7 +64,7 @@ async function OrderDetailContent({ locale, id }: { locale: Locale; id: string }
             {t("detail.subtitle")}
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {canModify && (
             <>
               <ClientOrderModifyButton
@@ -85,7 +85,7 @@ async function OrderDetailContent({ locale, id }: { locale: Locale; id: string }
               <ClientOrderCancelButton locale={locale} orderId={order.id} />
             </>
           )}
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="w-full sm:w-auto">
             <a href={`/${locale}/orders`}>{t("detail.backToList")}</a>
           </Button>
         </div>

@@ -57,6 +57,7 @@ export function ClientOrderCancelButton({
         variant="destructive"
         size="sm"
         onClick={() => setShowConfirm(true)}
+        className="w-full sm:w-auto"
       >
         {t("cancel")}
       </Button>

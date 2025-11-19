@@ -42,7 +42,13 @@ export function ClientOrderModifyButton({
   };
 
   return (
-    <Button variant="secondary" size="sm" onClick={handleClick} disabled={isPending}>
+    <Button 
+      variant="secondary" 
+      size="sm" 
+      onClick={handleClick} 
+      disabled={isPending}
+      className="w-full sm:w-auto"
+    >
       {t("modify")}
     </Button>
   );

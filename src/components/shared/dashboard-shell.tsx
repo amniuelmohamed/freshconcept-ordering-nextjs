@@ -98,11 +98,17 @@ export function DashboardShell({
   children,
 }: DashboardShellProps) {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
   const [pendingHref, setPendingHref] = useState<string | null>(null);
   const initials =
     user?.name?.[0]?.toUpperCase() ?? user?.email?.[0]?.toUpperCase() ?? "U";
   const signOut = signOutAction.bind(null, locale);
   const brandHref = navItems[0]?.href ?? "/";
+
+  // Only render DropdownMenu after mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleNavClick = (href: string) => {
     // Only track if it's a different route
@@ -150,44 +156,56 @@ export function DashboardShell({
               />
             </div>
             <LanguageSwitcher currentLocale={locale} availableLocales={availableLocales} />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="gap-2 p-2 text-white hover:bg-white/10 hover:text-white">
-                  <Avatar className="size-8 ring-2 ring-white/30">
-                    <AvatarImage alt={user?.name ?? user?.email ?? "User"} />
-                    <AvatarFallback className="bg-white/20 text-white font-semibold">{initials}</AvatarFallback>
-                  </Avatar>
-                  <span className="hidden text-sm font-medium md:inline">
-                    {user?.name ?? user?.email}
-                  </span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuLabel>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-semibold">
-                      {user?.name ?? user?.email ?? "User"}
+            {mounted ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="gap-2 p-2 text-white hover:bg-white/10 hover:text-white">
+                    <Avatar className="size-8 ring-2 ring-white/30">
+                      <AvatarImage alt={user?.name ?? user?.email ?? "User"} />
+                      <AvatarFallback className="bg-white/20 text-white font-semibold">{initials}</AvatarFallback>
+                    </Avatar>
+                    <span className="hidden text-sm font-medium md:inline">
+                      {user?.name ?? user?.email}
                     </span>
-                    {user?.email ? (
-                      <span className="text-xs text-muted-foreground">
-                        {user.email}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuLabel>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold">
+                        {user?.name ?? user?.email ?? "User"}
                       </span>
-                    ) : null}
-                  </div>
-                </DropdownMenuLabel>
-                <Separator className="my-1" />
-                <DropdownMenuItem asChild>
-                  <form action={signOut}>
-                    <button
-                      type="submit"
-                      className="flex w-full items-center justify-between text-left text-sm"
-                    >
-                      {signOutLabel}
-                    </button>
-                  </form>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                      {user?.email ? (
+                        <span className="text-xs text-muted-foreground">
+                          {user.email}
+                        </span>
+                      ) : null}
+                    </div>
+                  </DropdownMenuLabel>
+                  <Separator className="my-1" />
+                  <DropdownMenuItem asChild>
+                    <form action={signOut}>
+                      <button
+                        type="submit"
+                        className="flex w-full items-center justify-between text-left text-sm"
+                      >
+                        {signOutLabel}
+                      </button>
+                    </form>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button variant="ghost" className="gap-2 p-2 text-white hover:bg-white/10 hover:text-white">
+                <Avatar className="size-8 ring-2 ring-white/30">
+                  <AvatarImage alt={user?.name ?? user?.email ?? "User"} />
+                  <AvatarFallback className="bg-white/20 text-white font-semibold">{initials}</AvatarFallback>
+                </Avatar>
+                <span className="hidden text-sm font-medium md:inline">
+                  {user?.name ?? user?.email}
+                </span>
+              </Button>
+            )}
           </div>
         </div>
       </header>

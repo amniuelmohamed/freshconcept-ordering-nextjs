@@ -95,16 +95,16 @@ async function OrderDetailContent({
 
   return (
     <div className="flex flex-1 flex-col gap-6 print-container">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-semibold text-foreground">
             {t("detail.title", { orderId: id.slice(0, 8) })}
           </h1>
           <p className="text-sm text-muted-foreground">{t("detail.subtitle")}</p>
         </div>
-        <div className="flex gap-2 print-hide">
+        <div className="flex flex-wrap gap-2 print-hide">
           <PrintOrderButton />
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="w-full sm:w-auto">
             <Link href={`/${locale}/employee/orders`}>
               {t("detail.backToList")}
             </Link>
