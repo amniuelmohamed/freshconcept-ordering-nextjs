@@ -1,0 +1,1131 @@
+{
+  "app": {
+    "name": "Fresh Concept",
+    "welcome": "Welcome to your ordering portal."
+  },
+  "search": {
+    "searchPlaceholder": "Search...",
+    "searching": "Searching",
+    "typeToSearch": "Type at least 2 characters to search",
+    "noResults": "No results found",
+    "types": {
+      "product": "Products",
+      "order": "Orders",
+      "client": "Clients",
+      "favorite": "Favorites",
+      "employee": "Employees",
+      "category": "Categories"
+    }
+  },
+  "navigation": {
+    "common": {
+      "appName": "Fresh Concept",
+      "signOut": "Sign out"
+    },
+    "client": {
+      "dashboard": "Dashboard",
+      "quickOrder": "Quick Order",
+      "orders": "Orders",
+      "favorites": "Favorites",
+      "profile": "Profile"
+    },
+      "employee": {
+        "dashboard": "Dashboard",
+        "orders": "Orders",
+        "clients": "Clients",
+        "clientRoles": "Client Roles",
+        "products": "Products",
+        "categories": "Categories",
+        "employees": "Employees",
+        "employeeRoles": "Employee Roles",
+        "settings": "Settings"
+      }
+  },
+  "quickOrder": {
+    "title": "Quick order",
+    "subtitle": "Browse products, adjust quantities, and fill your next delivery.",
+    "searchPlaceholder": "Search products",
+    "favorites": "Favorites",
+    "filters": {
+      "all": "All products"
+    },
+    "empty": {
+      "title": "No products match your filters.",
+      "subtitle": "Adjust search terms or try another category."
+    },
+    "summary": {
+      "items": "{count} items",
+      "review": "Review order"
+    },
+    "badges": {
+      "favorite": "Favorite"
+    },
+    "product": {
+      "image": "Image",
+      "pricePerKg": "{price} / kg",
+      "approxWeight": "Approx. weight {weight} kg",
+      "sku": "SKU {value}",
+      "packaging": "Packaging",
+      "unit": "Unit",
+      "name": "Product",
+      "category": "Category",
+      "price": "Price",
+      "quantity": "Quantity"
+    },
+    "loading": "Loading products…",
+    "sort": {
+      "relevance": "Best match",
+      "nameAsc": "Name A → Z",
+      "nameDesc": "Name Z → A",
+      "priceAsc": "Price low → high",
+      "priceDesc": "Price high → low"
+    }
+  },
+  "checkout": {
+    "badge": "Checkout",
+    "title": "Review your order",
+    "subtitle": "Confirm quantities, add delivery notes, and send the order to our team.",
+    "empty": {
+      "title": "Your cart is empty",
+      "subtitle": "Add items from the quick order form before reviewing.",
+      "cta": "Browse products"
+    },
+    "items": {
+      "heading": "Order summary",
+      "table": {
+        "product": "Product",
+        "quantity": "Quantity",
+        "packaging": "Packaging",
+        "unit": "Unit",
+        "unitPrice": "Price / kg",
+        "subtotal": "Subtotal"
+      },
+      "sku": "SKU {value}",
+      "unit": "Unit: {value}"
+    },
+    "summary": {
+      "heading": "Totals",
+      "items": "{count} items",
+      "subtotalExclVat": "Subtotal (excl. VAT)",
+      "vat": "VAT ({rate}%)",
+      "estimatedTotal": "Estimated total (incl. VAT)",
+      "estimatedTotalLabel": "Estimated total"
+    },
+    "details": {
+      "heading": "Delivery details",
+      "deliveryDate": "Next delivery date",
+      "deliveryDateValue": "Scheduled for {value}",
+      "deliveryDatePending": "We’ll confirm your delivery slot shortly.",
+      "deliveryHint": "Based on your agreed delivery schedule.",
+      "notes": "Order notes",
+      "notesPlaceholder": "Optional instructions for preparation, packaging, or delivery.",
+      "notesHint": "Max 500 characters."
+    },
+    "actions": {
+      "back": "Continue shopping",
+      "submit": "Place order",
+      "submitting": "Placing order...",
+      "submitUpdate": "Update order",
+      "submittingUpdate": "Updating order..."
+    },
+    "messages": {
+      "cartEmpty": "Your cart is empty.",
+      "validationError": "Some details are missing or invalid.",
+      "productMismatch": "One of the products is no longer available. Refresh the quick order page.",
+      "genericError": "We couldn't place the order. Please try again.",
+      "submitSuccess": "Order created successfully!",
+      "updateSuccess": "Order updated successfully!"
+    }
+  },
+  "clientDashboard": {
+    "title": "Welcome back",
+    "subtitle": "Here's a quick snapshot of your account.",
+    "nextDelivery": "Next delivery",
+    "noDeliveryDays": "No delivery days configured",
+    "deliveriesNote": "Based on your configured delivery days",
+    "pendingOrder": "Pending order",
+    "noPendingOrder": "None",
+    "viewPendingOrder": "View order",
+    "pendingOrderNote": "You have no pending order",
+    "favoriteProducts": "Favorite products",
+    "favoriteNote": "Quick access to your favorite products",
+    "monthOrders": "Orders this month",
+    "monthOrdersNote": "Number of orders placed this month",
+    "recentOrdersTitle": "Recent orders",
+    "recentOrdersDescription": "Your last 5 orders",
+    "viewAllOrders": "View all orders",
+    "orderNumber": "Order #{id}",
+    "view": "View",
+    "noRecentOrders": "No recent orders",
+    "noRecentOrdersHelper": "Start by creating your first order",
+    "noRecentOrdersAction": "Order now",
+    "favoriteProductsTitle": "Favorite products",
+    "favoriteProductsDescription": "Your favorite products",
+    "viewAllFavorites": "View all favorites",
+    "noFavoriteProducts": "No favorite products",
+    "noFavoriteProductsHelper": "Add your favorite products for quick access",
+    "noFavoriteProductsAction": "Discover products",
+    "orderNow": "Order now",
+    "modifyOrder": "Modify",
+    "pendingOrderInProgress": "Order being prepared",
+    "quickStats": "Overview",
+    "monthTotal": "Monthly total"
+  },
+  "clientProfile": {
+    "title": "My profile",
+    "subtitle": "Manage your account information and preferences.",
+    "sections": {
+      "info": "Profile information",
+      "password": "Change password",
+      "passwordDescription": "Change your password by entering your current password and a new password.",
+      "resetPasswordDescription": "If you forgot your password, you can request a password reset link via email.",
+      "delivery": "Delivery information"
+    },
+    "form": {
+      "companyName": "Company name",
+      "contactName": "Contact name",
+      "contactEmail": "Email address",
+      "emailReadOnly": "Email cannot be changed as it is your login identifier",
+      "phone": "Phone number",
+      "mobile": "Mobile number",
+      "street": "Street address",
+      "city": "City",
+      "postalCode": "Postal code",
+      "country": "Country",
+      "preferredLocale": "Preferred language",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm new password",
+      "saveProfile": "Save changes",
+      "savingProfile": "Saving...",
+      "changePassword": "Change password",
+      "changingPassword": "Changing...",
+      "resetPassword": "Reset password",
+      "resettingPassword": "Sending..."
+    },
+    "delivery": {
+      "title": "Delivery days",
+      "description": "Your orders will be delivered on the following days:",
+      "noDays": "No delivery days configured. Please contact support.",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "messages": {
+      "profileSuccess": "Profile updated successfully",
+      "profileError": "Failed to update profile",
+      "passwordSuccess": "Password changed successfully",
+      "passwordError": "Failed to change password",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "resetPasswordSuccess": "A password reset email has been sent. Please check your inbox.",
+      "resetPasswordError": "Failed to send password reset email. Please try again."
+    }
+  },
+  "clientOrders": {
+    "title": "Order history",
+    "subtitle": "Review your past orders and reopen them for reference.",
+    "empty": {
+      "title": "No orders yet",
+      "subtitle": "You haven't placed any orders yet. Start by filling your cart from the quick order page.",
+      "cta": "Browse products"
+    },
+    "filters": {
+      "status": "Status",
+      "all": "All",
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "orderId": "Order ID",
+      "orderIdPlaceholder": "Search by ID...",
+      "sortLabel": "Sort by",
+      "sort": {
+        "createdDesc": "Created date (newest)",
+        "createdAsc": "Created date (oldest)",
+        "deliveryDesc": "Delivery date (newest)",
+        "deliveryAsc": "Delivery date (oldest)",
+        "amountDesc": "Amount (highest)",
+        "amountAsc": "Amount (lowest)"
+      },
+      "deliveryDateFrom": "Delivery Date From",
+      "deliveryDateTo": "Delivery Date To",
+      "createdFrom": "Created From",
+      "createdTo": "Created To",
+      "showDateFilters": "Show date filters",
+      "hideDateFilters": "Hide date filters",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters"
+    },
+    "table": {
+      "title": "Your orders",
+      "orderId": "Order ID",
+      "created": "Created",
+      "deliveryDate": "Delivery Date",
+      "status": "Status",
+      "estimatedTotal": "Estimated Total",
+      "actions": "Actions",
+      "view": "View",
+      "noOrders": "No orders found."
+    },
+    "detail": {
+      "title": "Order #{orderId}",
+      "subtitle": "View the status and totals of your order.",
+      "backToList": "Back to orders",
+      "info": {
+        "title": "Order information",
+        "status": "Status",
+        "created": "Created",
+        "deliveryDate": "Delivery date",
+        "estimatedTotal": "Estimated total",
+        "finalTotal": "Final total",
+        "notes": "Order notes"
+      },
+      "items": {
+        "title": "Order items",
+        "table": {
+          "product": "Product",
+          "quantity": "Quantity",
+          "unitPrice": "Unit price",
+          "subtotal": "Subtotal"
+        }
+      },
+      "modify": "Modify this order",
+      "cancel": "Cancel order",
+      "cancelConfirm": {
+        "title": "Cancel this order?",
+        "description": "This action will cancel your order. You can create a new order afterwards.",
+        "confirm": "Yes, cancel order",
+        "back": "No, keep order"
+      },
+      "cancelSuccess": "Order cancelled successfully",
+      "cancelError": "Failed to cancel order"
+      }
+  },
+  "employeeDashboard": {
+    "title": "Today's operations",
+    "subtitle": "Monitor orders, logistics, and team activity at a glance.",
+    "ordersPending": "Pending orders",
+    "ordersPendingNote": "Orders awaiting review and confirmation.",
+    "ordersToday": "Deliveries today",
+    "ordersTodayNote": "Orders scheduled for delivery today.",
+    "clientsActive": "Active clients",
+    "clientsActiveNote": "Total number of active client accounts.",
+    "pendingValue": "Pending orders value",
+    "pendingValueNote": "Total estimated value awaiting confirmation.",
+    "monthOrdersCount": "Orders this month",
+    "monthOrdersCountNote": "Number of orders created this month.",
+    "monthOrdersValue": "This month's order value",
+    "monthOrdersValueNote": "Total estimated value of orders created this month.",
+    "pendingOrdersList": "Pending orders",
+    "pendingOrdersEmpty": "No pending orders at the moment.",
+    "viewOrders": "View orders",
+    "quickStats": "Overview",
+    "detailedAnalytics": "Detailed statistics",
+    "charts": {
+      "categoryTitle": "Category distribution",
+      "categoryDescription": "Top 6 most ordered categories",
+      "statusTitle": "Order statuses",
+      "statusDescription": "Order distribution by status",
+      "noData": "No data available",
+      "countLabel": "Count"
+    },
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    }
+  },
+  "employeeOrders": {
+    "title": "Order Management",
+    "subtitle": "Review, filter, and manage all orders.",
+    "filters": {
+      "title": "Filters",
+      "status": "Status",
+      "orderId": "Order ID",
+      "orderIdPlaceholder": "Search by order ID...",
+      "client": "Client",
+      "clientPlaceholder": "Search by client name or email...",
+      "dateFrom": "Delivery Date From",
+      "dateTo": "Delivery Date To",
+      "deliveryDateFrom": "Delivery Date From",
+      "deliveryDateTo": "Delivery Date To",
+      "createdFrom": "Created From",
+      "createdTo": "Created To",
+      "showDateFilters": "Show date filters",
+      "hideDateFilters": "Hide date filters",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters",
+      "all": "All",
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "table": {
+      "orderId": "Order ID",
+      "client": "Client",
+      "created": "Created",
+      "deliveryDate": "Delivery Date",
+      "status": "Status",
+      "estimatedTotal": "Estimated Total",
+      "actions": "Actions",
+      "view": "View",
+      "noOrders": "No orders found."
+    },
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "unknown": "Unknown"
+    },
+    "detail": {
+      "title": "Order #{orderId}",
+      "subtitle": "View and manage order details.",
+      "backToList": "Back to Orders",
+      "items": {
+        "title": "Order Items",
+        "table": {
+          "product": "Product",
+          "quantity": "Quantity",
+          "unitPrice": "Unit Price",
+          "subtotal": "Subtotal"
+        }
+      },
+      "info": {
+        "title": "Order Information",
+        "status": "Status",
+        "created": "Created",
+        "deliveryDate": "Delivery Date",
+        "estimatedTotal": "Estimated Total",
+        "finalTotal": "Final Total"
+      },
+      "client": {
+        "title": "Client Information",
+        "company": "Company",
+        "contact": "Contact",
+        "email": "Email"
+      },
+      "print": "Print order",
+      "update": {
+        "title": "Update Order",
+        "subtitle": "Modify order status, final total, or notes.",
+        "status": {
+          "label": "Status",
+          "placeholder": "Select status",
+          "pending": "Pending",
+          "confirmed": "Confirmed",
+          "shipped": "Shipped",
+          "delivered": "Delivered",
+          "cancelled": "Cancelled"
+        },
+        "finalTotal": {
+          "label": "Final Total",
+          "placeholder": "Enter final total after weighing"
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Add or update order notes"
+        },
+        "submit": "Update Order",
+        "submitting": "Updating...",
+        "success": "Order updated successfully.",
+        "updateSuccess": "Order updated successfully!",
+        "errors": {
+          "validation-error": "Invalid form data. Please check your inputs.",
+          "not-found": "Order not found.",
+          "update-error": "Failed to update order. Please try again.",
+          "unauthorized": "You don't have permission to update this order."
+        }
+      }
+    }
+  },
+  "clientRoles": {
+    "title": "Client Roles",
+    "subtitle": "Manage client role types and their default settings.",
+    "createNew": "Create New Role",
+    "noRoles": "No client roles found. Create your first role to get started.",
+    "defaultDeliveryDays": "Default Delivery Days",
+    "clientCount": "Clients",
+    "viewDetails": "View Details",
+    "backToList": "Back to Roles",
+    "create": {
+      "title": "Create Client Role",
+      "subtitle": "Add a new client role type to the system."
+    },
+    "edit": {
+      "title": "Edit Client Role",
+      "subtitle": "Update role information and settings."
+    },
+    "form": {
+      "title": "Role Information",
+      "subtitle": "Fill in the role details in all supported languages.",
+      "name": {
+        "fr": "Name (French)",
+        "nl": "Name (Dutch)",
+        "en": "Name (English)"
+      },
+      "slug": {
+        "label": "Slug",
+        "description": "Unique identifier (lowercase, numbers, hyphens only). Cannot be changed after creation."
+      },
+      "description": {
+        "fr": "Description (French)",
+        "nl": "Description (Dutch)",
+        "en": "Description (English)"
+      },
+      "deliveryDays": {
+        "label": "Default Delivery Days",
+        "description": "Select the default delivery days for clients with this role.",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "create": "Create Role",
+      "update": "Update Role",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Role created successfully!",
+      "updateSuccess": "Role updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "slug-exists": "A role with this slug already exists.",
+        "create-error": "Failed to create role. Please try again.",
+        "update-error": "Failed to update role. Please try again.",
+        "not-found": "Role not found.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    },
+    "delete": {
+      "title": "Delete Role",
+      "subtitle": "Permanently remove this role from the system.",
+      "button": "Delete Role",
+      "confirm": "Yes, Delete",
+      "cancel": "Cancel",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the role \"{name}\"? This action cannot be undone.",
+      "cannotDeleteOne": "This role cannot be deleted because it is used by {count} client.",
+      "cannotDeleteMany": "This role cannot be deleted because it is used by {count} clients.",
+      "successMessage": "Role deleted successfully!",
+      "errorMessage": "Failed to delete role. Please try again.",
+      "errors": {
+        "not-found": "Role not found.",
+        "has-clients": "Cannot delete role that is assigned to clients.",
+        "delete-error": "Failed to delete role. Please try again.",
+        "unauthorized": "You don't have permission to delete roles."
+      }
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Manage product categories and their translations.",
+    "createNew": "Create New Category",
+    "noCategories": "No categories found. Create your first category to get started.",
+    "productCount": "Products",
+    "description": "Description",
+    "view": "View",
+    "viewDetails": "View Details",
+    "backToList": "Back to Categories",
+    "create": {
+      "title": "Create Category",
+      "subtitle": "Add a new product category to the system."
+    },
+    "edit": {
+      "title": "Edit Category",
+      "subtitle": "Update category information."
+    },
+    "detail": {
+      "title": "Category Details",
+      "subtitle": "View category information.",
+      "name": "Name",
+      "description": "Description"
+    },
+    "products": {
+      "title": "Products in this Category",
+      "subtitle": "There {count, plural, =1 {is # product} other {are # products}} in this category.",
+      "table": {
+        "sku": "SKU",
+        "name": "Name",
+        "price": "Price",
+        "unit": "Unit",
+        "status": "Status",
+        "active": "Active",
+        "inactive": "Inactive",
+        "actions": "Actions",
+        "edit": "Edit"
+      }
+    },
+    "form": {
+      "title": "Category Information",
+      "subtitle": "Fill in the category details in all supported languages.",
+      "name": {
+        "fr": "Name (French)",
+        "nl": "Name (Dutch)",
+        "en": "Name (English)"
+      },
+      "description": {
+        "fr": "Description (French)",
+        "nl": "Description (Dutch)",
+        "en": "Description (English)"
+      },
+      "create": "Create Category",
+      "update": "Update Category",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Category created successfully!",
+      "updateSuccess": "Category updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "create-error": "Failed to create category. Please try again.",
+        "update-error": "Failed to update category. Please try again.",
+        "not-found": "Category not found.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    },
+    "delete": {
+      "title": "Delete Category",
+      "subtitle": "Permanently remove this category from the system.",
+      "button": "Delete Category",
+      "confirm": "Yes, Delete",
+      "cancel": "Cancel",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the category \"{name}\"? This action cannot be undone.",
+      "cannotDeleteOne": "This category cannot be deleted because it is used by {count} product.",
+      "cannotDeleteMany": "This category cannot be deleted because it is used by {count} products.",
+      "successMessage": "Category deleted successfully!",
+      "errorMessage": "Failed to delete category. Please try again.",
+      "errors": {
+        "not-found": "Category not found.",
+        "has-products": "Cannot delete category that is assigned to products.",
+        "delete-error": "Failed to delete category. Please try again.",
+        "unauthorized": "You don't have permission to delete categories."
+      }
+    }
+  },
+  "employeeRoles": {
+    "title": "Employee Roles",
+    "subtitle": "Manage employee roles and their permissions.",
+    "createNew": "Create New Role",
+    "noRoles": "No employee roles found. Create your first role to get started.",
+    "employees": "Employees",
+    "permissions": "Permissions",
+    "legend": "Available permissions that can be assigned to employee roles.",
+    "viewDetails": "View Details",
+    "backToList": "Back to Roles",
+    "create": {
+      "title": "Create Employee Role",
+      "subtitle": "Add a new employee role to the system."
+    },
+    "edit": {
+      "title": "Edit Employee Role",
+      "subtitle": "Update role details and permissions."
+    },
+    "delete": {
+      "title": "Delete Employee Role",
+      "subtitle": "Permanently remove this role from the system.",
+      "button": "Delete Role",
+      "confirmDelete": "Confirm Delete",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the role \"{name}\"? This action cannot be undone.",
+      "cannotDelete": "This role cannot be deleted because {count, plural, =1 {# employee is} other {# employees are}} assigned to it.",
+      "cancel": "Cancel",
+      "successMessage": "Employee role deleted successfully!",
+      "errorMessage": "Failed to delete employee role. Please try again."
+    },
+    "form": {
+      "title": "Role Information",
+      "subtitle": "Fill in the role details in all supported languages.",
+      "name": {
+        "fr": "Name (French)",
+        "nl": "Name (Dutch)",
+        "en": "Name (English)"
+      },
+      "permissions": {
+        "label": "Permissions",
+        "description": "Select the permissions for this role.",
+        "manage_settings": "Manage Settings",
+        "manage_client_roles": "Manage Client Roles",
+        "manage_employee_roles": "Manage Employee Roles",
+        "view_clients": "View Clients",
+        "manage_clients": "Manage Clients",
+        "manage_employees": "Manage Employees",
+        "manage_products": "Manage Products",
+        "view_products": "View Products",
+        "view_orders": "View Orders",
+        "manage_orders": "Manage Orders"
+      },
+      "create": "Create Role",
+      "update": "Update Role",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Role created successfully.",
+      "updateSuccess": "Role updated successfully.",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "create-error": "Failed to create role. Please try again.",
+        "not-found": "Role not found.",
+        "update-error": "Failed to update role. Please try again.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    }
+  },
+  "employeeClients": {
+    "title": "Client Management",
+    "subtitle": "Manage client accounts and their information.",
+    "createNew": "Create New Client",
+    "noClients": "No clients found. Create your first client to get started.",
+    "search": {
+      "placeholder": "Search clients by name, email, or company..."
+    },
+    "filters": {
+      "searchPlaceholder": "Search clients by name, email, company, or role...",
+      "roleLabel": "Role",
+      "allRoles": "All roles"
+    },
+    "backToList": "Back to Clients",
+    "create": {
+      "title": "Create Client",
+      "subtitle": "Add a new client account to the system."
+    },
+    "edit": {
+      "title": "Edit Client",
+      "subtitle": "Update client information and settings."
+    },
+    "form": {
+      "title": "Client Information",
+      "subtitle": "Fill in the client details. An email will be sent to set up their password.",
+      "email": {
+        "label": "Email",
+        "description": "Used for login. A password setup email will be sent.",
+        "descriptionEdit": "Email cannot be changed after creation."
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "contactName": {
+        "label": "Contact Name"
+      },
+      "contactPhone": {
+        "label": "Phone"
+      },
+      "contactMobile": {
+        "label": "Mobile"
+      },
+      "role": {
+        "label": "Client Role",
+        "placeholder": "Select a role"
+      },
+      "remise": {
+        "label": "Discount (%)",
+        "description": "Percentage discount applied to base prices."
+      },
+      "preferredLocale": {
+        "label": "Preferred Language"
+      },
+      "tvaNumber": {
+        "label": "VAT Number"
+      },
+      "billingAddress": {
+        "title": "Billing Address",
+        "street": "Street",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "country": "Country",
+        "different": "Billing address is different from shipping address",
+        "differentDescription": "Check this if the billing address differs from the shipping address"
+      },
+      "shippingAddress": {
+        "title": "Shipping Address",
+        "street": "Street",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "country": "Country"
+      },
+      "deliveryDays": {
+        "label": "Delivery Days",
+        "description": "Select the delivery days for this client. Defaults from role if not specified.",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "create": "Create Client",
+      "update": "Update Client",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Client created successfully! A password setup email has been sent.",
+      "updateSuccess": "Client updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "email-exists": "An account with this email already exists.",
+        "role-not-found": "Selected role not found.",
+        "user-creation-error": "Failed to create user account. Please try again.",
+        "client-creation-error": "Failed to create client profile. Please try again.",
+        "not-found": "Client not found.",
+        "update-error": "Failed to update client. Please try again.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    },
+    "table": {
+      "company": "Company",
+      "contact": "Contact",
+      "role": "Role",
+      "email": "Email",
+      "created": "Created",
+      "actions": "Actions",
+      "view": "View",
+      "edit": "Edit"
+    },
+    "detail": {
+      "title": "Client Details",
+      "subtitle": "View client information.",
+      "info": {
+        "title": "Client Information",
+        "created": "Created",
+        "role": "Role",
+        "deliveryDays": "Delivery Days",
+        "remise": "Discount"
+      }
+    },
+    "delete": {
+      "title": "Delete Client",
+      "subtitle": "Permanently remove this client from the system.",
+      "button": "Delete Client",
+      "confirmDelete": "Confirm Delete",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the client \"{name}\"? This action cannot be undone.",
+      "cannotDelete": "This client cannot be deleted because {count, plural, =1 {# order exists} other {# orders exist}}.",
+      "cancel": "Cancel"
+    }
+  },
+  "employeeEmployees": {
+    "title": "Employee Management",
+    "subtitle": "Manage employee accounts and their information.",
+    "createNew": "Create New Employee",
+    "noEmployees": "No employees found. Create your first employee to get started.",
+    "search": {
+      "placeholder": "Search employees by name, email, or role..."
+    },
+    "filters": {
+      "searchPlaceholder": "Search employees by name, email, or role...",
+      "roleLabel": "Role",
+      "allRoles": "All roles"
+    },
+    "backToList": "Back to Employees",
+    "create": {
+      "title": "Create Employee",
+      "subtitle": "Add a new employee account to the system."
+    },
+    "edit": {
+      "title": "Edit Employee",
+      "subtitle": "Update employee information and settings."
+    },
+    "form": {
+      "title": "Employee Information",
+      "subtitle": "Fill in the employee details. An email will be sent to set up their password.",
+      "email": {
+        "label": "Email",
+        "description": "Used for login. A password setup email will be sent.",
+        "descriptionEdit": "Email cannot be changed after creation."
+      },
+      "fullName": {
+        "label": "Full Name"
+      },
+      "role": {
+        "label": "Employee Role",
+        "placeholder": "Select a role"
+      },
+      "create": "Create Employee",
+      "update": "Update Employee",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Employee created successfully! A password setup email has been sent.",
+      "updateSuccess": "Employee updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "email-exists": "An account with this email already exists.",
+        "role-not-found": "Selected role not found.",
+        "user-creation-error": "Failed to create user account. Please try again.",
+        "employee-creation-error": "Failed to create employee profile. Please try again.",
+        "not-found": "Employee not found.",
+        "update-error": "Failed to update employee. Please try again.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    },
+    "table": {
+      "name": "Name",
+      "role": "Role",
+      "email": "Email",
+      "created": "Created",
+      "actions": "Actions",
+      "view": "View"
+    },
+    "delete": {
+      "title": "Delete Employee",
+      "subtitle": "Permanently remove this employee from the system.",
+      "button": "Delete Employee",
+      "confirmDelete": "Confirm Delete",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the employee \"{name}\"? This action cannot be undone.",
+      "errorMessage": "Failed to delete employee. Please try again.",
+      "cancel": "Cancel"
+    }
+  },
+  "employeeSettings": {
+    "title": "Platform Settings",
+    "subtitle": "Configure global platform settings such as order cutoff times and available permissions.",
+    "form": {
+      "title": "Settings",
+      "subtitle": "Update platform-wide configuration.",
+      "cutoffTime": {
+        "label": "Order Cutoff Time",
+        "description": "Time of day when orders must be placed (format: HH:mm). Orders placed after this time will be scheduled for the next delivery cycle."
+      },
+      "cutoffDayOffset": {
+        "label": "Cutoff Day Offset",
+        "description": "Number of days before delivery when orders must be placed. For example, if set to 1, orders must be placed 1 day before the delivery date."
+      },
+      "defaultLocale": {
+        "label": "Default Locale",
+        "description": "Default language for the platform when no user preference is set."
+      },
+      "vatRate": {
+        "label": "VAT Rate (%)",
+        "description": "VAT rate in percentage (e.g., 21 for 21% VAT)."
+      },
+      "availableLocales": {
+        "label": "Available Locales",
+        "description": "Select which languages are available for users to choose from."
+      },
+      "permissions": {
+        "label": "Available Permissions",
+        "description": "Select which permissions are available for assignment to employee roles. Unchecked permissions will not be available when creating or editing employee roles.",
+        "manage_settings": "Manage Settings",
+        "manage_client_roles": "Manage Client Roles",
+        "manage_employee_roles": "Manage Employee Roles",
+        "view_clients": "View Clients",
+        "manage_clients": "Manage Clients",
+        "manage_employees": "Manage Employees",
+        "manage_products": "Manage Products",
+        "view_products": "View Products",
+        "view_orders": "View Orders",
+        "manage_orders": "Manage Orders"
+      },
+      "units": {
+        "label": "Available Units",
+        "description": "Select which measurement units are available for products. Unchecked units will not be available when creating or editing products."
+      },
+      "update": "Update Settings",
+      "updating": "Updating...",
+      "updateSuccess": "Settings updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "update-error": "Failed to update settings. Please try again.",
+        "unauthorized": "You don't have permission to manage settings."
+      }
+    }
+  },
+  "employeeProducts": {
+    "title": "Products",
+    "subtitle": "Manage product catalog, pricing, and visibility.",
+    "createNew": "Create New Product",
+    "noProducts": "No products found. Create your first product to get started.",
+    "search": {
+      "placeholder": "Search products by name, SKU, or category..."
+    },
+    "filters": {
+      "searchPlaceholder": "Search products by name, SKU, or category...",
+      "categoryLabel": "Category",
+      "allCategories": "All categories",
+      "statusLabel": "Status",
+      "allStatuses": "All statuses",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "sortLabel": "Sort by",
+      "sort": {
+        "createdDesc": "Newest",
+        "nameAsc": "Name A → Z",
+        "nameDesc": "Name Z → A",
+        "priceAsc": "Price: low to high",
+        "priceDesc": "Price: high to low"
+      }
+    },
+    "backToList": "Back to Products",
+    "create": {
+      "title": "Create Product",
+      "subtitle": "Add a new product to the catalog."
+    },
+    "edit": {
+      "title": "Edit Product",
+      "subtitle": "Update product information and settings."
+    },
+    "detail": {
+      "title": "Product Details",
+      "subtitle": "View product information.",
+      "name": "Name",
+      "description": "Description"
+    },
+    "form": {
+      "title": "Product Information",
+      "subtitle": "Fill in the product details in all supported languages.",
+      "sku": {
+        "label": "SKU",
+        "description": "Product code or identifier (optional)."
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category"
+      },
+      "name": {
+        "fr": "Name (French)",
+        "nl": "Name (Dutch)",
+        "en": "Name (English)"
+      },
+      "description": {
+        "fr": "Description (French)",
+        "nl": "Description (Dutch)",
+        "en": "Description (English)"
+      },
+      "basePrice": {
+        "label": "Base Price",
+        "description": "Price per kg in euros (even if unit is piece, box, etc.)."
+      },
+      "unit": {
+        "label": "Unit",
+        "description": "Unit of measurement (e.g., kg, piece, box, bunch).",
+        "placeholder": "Select a unit"
+      },
+      "approximateWeight": {
+        "label": "Approximate Weight",
+        "description": "Approximate weight in kg (for items sold by piece but priced by weight)."
+      },
+      "imageUrl": {
+        "label": "Product Image",
+        "description": "Upload an image for the product (JPEG, PNG, or WebP, max 5MB).",
+        "uploading": "Uploading image...",
+        "remove": "Remove Image"
+      },
+      "visibleTo": {
+        "label": "Visible To",
+        "description": "Select which client roles can see this product. Leave all unchecked to make it visible to all clients.",
+        "allClients": "Visible to all clients (no roles selected).",
+        "selectedClients": "Visible to {count} selected client role(s)."
+      },
+      "active": {
+        "label": "Active",
+        "description": "Only active products are visible to clients."
+      },
+      "create": "Create Product",
+      "update": "Update Product",
+      "creating": "Creating...",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "createSuccess": "Product created successfully!",
+      "updateSuccess": "Product updated successfully!",
+      "errors": {
+        "validation-error": "Invalid form data. Please check your inputs.",
+        "create-error": "Failed to create product. Please try again.",
+        "update-error": "Failed to update product. Please try again.",
+        "not-found": "Product not found.",
+        "unauthorized": "You don't have permission to perform this action."
+      }
+    },
+    "table": {
+      "image": "Image",
+      "sku": "SKU",
+      "name": "Name",
+      "category": "Category",
+      "price": "Price",
+      "unit": "Unit",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "actions": "Actions",
+      "edit": "Edit",
+      "view": "View"
+    },
+    "delete": {
+      "title": "Delete Product",
+      "subtitle": "Permanently remove this product from the catalog.",
+      "button": "Delete Product",
+      "confirmDelete": "Confirm Delete",
+      "deleting": "Deleting...",
+      "confirmMessage": "Are you sure you want to delete the product \"{name}\"? This action cannot be undone.",
+      "cannotDelete": "This product cannot be deleted because {count, plural, =1 {# order uses} other {# orders use}} it.",
+      "cancel": "Cancel"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Enter your credentials to access your account.",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "loading": "Signing in...",
+      "forgotPassword": "Forgot password?",
+      "errors": {
+        "invalidCredentials": "We couldn't find an account with those credentials.",
+        "unknown": "Something went wrong. Please try again."
+      }
+    },
+    "setPassword": {
+      "title": "Set your password",
+      "subtitle": "Create a secure password for your account",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "submit": "Set Password",
+      "submitting": "Setting password…",
+      "verifying": "Verifying invitation link…",
+      "errors": {
+        "invalidLink": "Invalid or expired invitation link. Please contact support.",
+        "updateFailed": "Failed to set password. Please try again.",
+        "unknown": "An error occurred. Please try again."
+      }
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+      "forgotPassword": "Forgot password?",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email address",
+      "description": "Enter your email address and we'll send you a link to reset your password.",
+      "submit": "Send link",
+      "sending": "Sending...",
+      "cancel": "Cancel",
+      "backToLogin": "Back to login",
+      "successMessage": "If an account exists with this email address, a reset link has been sent. Please check your inbox.",
+      "errorMessage": "An error occurred. Please try again."
+    }
+  },
+  "unauthorized": {
+    "title": "Unauthorized Access",
+    "description": "You don't have permission to access this resource. Please contact an administrator if you believe this is an error.",
+    "backToDashboard": "Back to Dashboard"
+  }
+}
+

@@ -1,0 +1,1132 @@
+{
+  "app": {
+    "name": "Fresh Concept",
+    "welcome": "Welkom bij uw bestelportaal."
+  },
+  "search": {
+    "searchPlaceholder": "Zoeken...",
+    "searching": "Zoeken",
+    "typeToSearch": "Typ minstens 2 tekens om te zoeken",
+    "noResults": "Geen resultaten gevonden",
+    "types": {
+      "product": "Producten",
+      "order": "Bestellingen",
+      "client": "Klanten",
+      "favorite": "Favorieten",
+      "employee": "Medewerkers",
+      "category": "Categorieën"
+    }
+  },
+  "navigation": {
+    "common": {
+      "appName": "Fresh Concept",
+      "signOut": "Uitloggen"
+    },
+    "client": {
+      "dashboard": "Dashboard",
+      "quickOrder": "Snel bestellen",
+      "orders": "Bestellingen",
+      "favorites": "Favorieten",
+      "profile": "Profiel"
+    },
+      "employee": {
+        "dashboard": "Dashboard",
+        "orders": "Bestellingen",
+        "clients": "Klanten",
+        "clientRoles": "Klantrollen",
+        "products": "Producten",
+        "categories": "Categorieën",
+        "employees": "Medewerkers",
+        "employeeRoles": "Medewerkerrollen",
+        "settings": "Instellingen"
+      }
+  },
+  "quickOrder": {
+    "title": "Snelle bestelling",
+    "subtitle": "Blader door producten, pas hoeveelheden aan en vul uw volgende levering.",
+    "searchPlaceholder": "Producten zoeken",
+    "favorites": "Favorieten",
+    "filters": {
+      "all": "Alle producten"
+    },
+    "empty": {
+      "title": "Geen producten voldoen aan uw filters.",
+      "subtitle": "Pas de zoekterm aan of kies een andere categorie."
+    },
+    "summary": {
+      "items": "{count} artikelen",
+      "review": "Bestelling controleren"
+    },
+    "badges": {
+      "favorite": "Favoriet"
+    },
+    "product": {
+      "image": "Afbeelding",
+      "pricePerKg": "{price} / kg",
+      "approxWeight": "Geschat gewicht {weight} kg",
+      "sku": "SKU {value}",
+      "packaging": "Verpakking",
+      "unit": "Eenheid",
+      "name": "Product",
+      "category": "Categorie",
+      "price": "Prijs",
+      "quantity": "Hoeveelheid"
+    },
+    "loading": "Producten laden…",
+    "sort": {
+      "relevance": "Meest relevant",
+      "nameAsc": "Naam A → Z",
+      "nameDesc": "Naam Z → A",
+      "priceAsc": "Prijs laag → hoog",
+      "priceDesc": "Prijs hoog → laag"
+    }
+  },
+  "checkout": {
+    "badge": "Checkout",
+    "title": "Controleer uw bestelling",
+    "subtitle": "Bevestig de hoeveelheden, voeg leveringsnotities toe en verstuur de bestelling naar ons team.",
+    "empty": {
+      "title": "Uw winkelwagen is leeg",
+      "subtitle": "Voeg artikelen toe via de snelle bestelling voordat u bevestigt.",
+      "cta": "Producten bekijken"
+    },
+    "items": {
+      "heading": "Overzicht",
+      "table": {
+        "product": "Product",
+        "quantity": "Hoeveelheid",
+        "packaging": "Verpakking",
+        "unit": "Eenheid",
+        "unitPrice": "Prijs / kg",
+        "subtotal": "Subtotaal"
+      },
+      "sku": "SKU {value}",
+      "unit": "Eenheid: {value}"
+    },
+    "summary": {
+      "heading": "Totalen",
+      "items": "{count} artikelen",
+      "subtotalExclVat": "Subtotaal (excl. BTW)",
+      "vat": "BTW ({rate}%)",
+      "estimatedTotal": "Geschatte totaal (incl. BTW)",
+      "estimatedTotalLabel": "Geschatte totaal"
+    },
+    "details": {
+      "heading": "Leveringsdetails",
+      "deliveryDate": "Volgende leverdatum",
+      "deliveryDateValue": "Gepland voor {value}",
+      "deliveryDatePending": "We bevestigen je levermoment binnenkort.",
+      "deliveryHint": "Gebaseerd op je afgesproken leveringsschema.",
+      "notes": "Bestelnotities",
+      "notesPlaceholder": "Optionele instructies voor voorbereiding, verpakking of levering.",
+      "notesHint": "Maximaal 500 tekens."
+    },
+    "actions": {
+      "back": "Verder winkelen",
+      "submit": "Bestelling plaatsen",
+      "submitting": "Bestelling wordt geplaatst...",
+      "submitUpdate": "Bestelling bijwerken",
+      "submittingUpdate": "Bestelling wordt bijgewerkt..."
+    },
+    "messages": {
+      "cartEmpty": "Uw winkelwagen is leeg.",
+      "validationError": "Er ontbreken gegevens of ze zijn ongeldig.",
+      "productMismatch": "Een product is niet meer beschikbaar. Vernieuw de snelle bestelling.",
+      "genericError": "We konden de bestelling niet plaatsen. Probeer het opnieuw.",
+      "submitSuccess": "Bestelling succesvol aangemaakt!",
+      "updateSuccess": "Bestelling succesvol bijgewerkt!"
+    }
+  },
+  "clientDashboard": {
+    "title": "Welkom terug",
+    "subtitle": "Een snel overzicht van uw account.",
+    "nextDelivery": "Volgende levering",
+    "noDeliveryDays": "Geen leveringsdagen geconfigureerd",
+    "deliveriesNote": "Gebaseerd op uw geconfigureerde leveringsdagen",
+    "pendingOrder": "Openstaande bestelling",
+    "noPendingOrder": "Geen",
+    "viewPendingOrder": "Bekijk bestelling",
+    "pendingOrderNote": "U heeft geen openstaande bestelling",
+    "favoriteProducts": "Favoriete producten",
+    "favoriteNote": "Snel toegang tot uw favoriete producten",
+    "monthOrders": "Bestellingen deze maand",
+    "monthOrdersNote": "Aantal bestellingen deze maand",
+    "recentOrdersTitle": "Recente bestellingen",
+    "recentOrdersDescription": "Uw laatste 5 bestellingen",
+    "viewAllOrders": "Alle bestellingen bekijken",
+    "orderNumber": "Bestelling #{id}",
+    "view": "Bekijken",
+    "noRecentOrders": "Geen recente bestellingen",
+    "noRecentOrdersHelper": "Begin met het aanmaken van uw eerste bestelling",
+    "noRecentOrdersAction": "Nu bestellen",
+    "favoriteProductsTitle": "Favoriete producten",
+    "favoriteProductsDescription": "Uw favoriete producten",
+    "viewAllFavorites": "Alle favorieten bekijken",
+    "noFavoriteProducts": "Geen favoriete producten",
+    "noFavoriteProductsHelper": "Voeg uw favoriete producten toe voor snelle toegang",
+    "noFavoriteProductsAction": "Ontdek producten",
+    "orderNow": "Nu bestellen",
+    "modifyOrder": "Wijzigen",
+    "pendingOrderInProgress": "Bestelling wordt voorbereid",
+    "quickStats": "Overzicht",
+    "monthTotal": "Maandtotaal"
+  },
+  "clientProfile": {
+    "title": "Mijn profiel",
+    "subtitle": "Beheer uw accountinformatie en voorkeuren.",
+    "sections": {
+      "info": "Profielinformatie",
+      "password": "Wachtwoord wijzigen",
+      "passwordDescription": "Wijzig uw wachtwoord door uw huidige wachtwoord en een nieuw wachtwoord in te voeren.",
+      "resetPasswordDescription": "Als u uw wachtwoord bent vergeten, kunt u een wachtwoordresetlink per e-mail aanvragen.",
+      "delivery": "Leveringsinformatie"
+    },
+    "form": {
+      "companyName": "Bedrijfsnaam",
+      "contactName": "Contactpersoon",
+      "contactEmail": "E-mailadres",
+      "emailReadOnly": "Het e-mailadres kan niet worden gewijzigd omdat het uw login-identificatie is",
+      "phone": "Telefoonnummer",
+      "mobile": "Mobiel nummer",
+      "street": "Straat adres",
+      "city": "Stad",
+      "postalCode": "Postcode",
+      "country": "Land",
+      "preferredLocale": "Voorkeurstaal",
+      "currentPassword": "Huidig wachtwoord",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig nieuw wachtwoord",
+      "saveProfile": "Wijzigingen opslaan",
+      "savingProfile": "Opslaan...",
+      "changePassword": "Wachtwoord wijzigen",
+      "changingPassword": "Wijzigen...",
+      "resetPassword": "Wachtwoord resetten",
+      "resettingPassword": "Verzenden..."
+    },
+    "delivery": {
+      "title": "Leveringsdagen",
+      "description": "Uw bestellingen worden geleverd op de volgende dagen:",
+      "noDays": "Geen leveringsdagen geconfigureerd. Neem contact op met support.",
+      "monday": "Maandag",
+      "tuesday": "Dinsdag",
+      "wednesday": "Woensdag",
+      "thursday": "Donderdag",
+      "friday": "Vrijdag",
+      "saturday": "Zaterdag",
+      "sunday": "Zondag"
+    },
+    "messages": {
+      "profileSuccess": "Profiel succesvol bijgewerkt",
+      "profileError": "Profiel bijwerken mislukt",
+      "passwordSuccess": "Wachtwoord succesvol gewijzigd",
+      "passwordError": "Wachtwoord wijzigen mislukt",
+      "passwordMismatch": "Wachtwoorden komen niet overeen",
+      "passwordTooShort": "Wachtwoord moet minimaal 6 tekens bevatten",
+      "resetPasswordSuccess": "Er is een e-mail voor wachtwoordreset verzonden. Controleer uw inbox.",
+      "resetPasswordError": "E-mail voor wachtwoordreset verzenden mislukt. Probeer het opnieuw."
+    }
+  },
+  "clientOrders": {
+    "title": "Bestelgeschiedenis",
+    "subtitle": "Bekijk uw eerdere bestellingen en hun status.",
+    "empty": {
+      "title": "Nog geen bestellingen",
+      "subtitle": "U heeft nog geen bestellingen geplaatst. Vul eerst uw winkelwagen via de snelle bestelling.",
+      "cta": "Producten bekijken"
+    },
+    "filters": {
+      "status": "Status",
+      "all": "Alle",
+      "pending": "In afwachting",
+      "confirmed": "Bevestigd",
+      "shipped": "Verzonden",
+      "delivered": "Geleverd",
+      "cancelled": "Geannuleerd",
+      "orderId": "Bestel-ID",
+      "orderIdPlaceholder": "Zoeken op ID...",
+      "sortLabel": "Sorteren op",
+      "sort": {
+        "createdDesc": "Aanmaakdatum (nieuwste)",
+        "createdAsc": "Aanmaakdatum (oudste)",
+        "deliveryDesc": "Leverdatum (nieuwste)",
+        "deliveryAsc": "Leverdatum (oudste)",
+        "amountDesc": "Bedrag (hoogste)",
+        "amountAsc": "Bedrag (laagste)"
+      },
+      "deliveryDateFrom": "Leverdatum vanaf",
+      "deliveryDateTo": "Leverdatum tot",
+      "createdFrom": "Aangemaakt vanaf",
+      "createdTo": "Aangemaakt tot",
+      "showDateFilters": "Datumfilters tonen",
+      "hideDateFilters": "Datumfilters verbergen",
+      "apply": "Filters toepassen",
+      "clear": "Filters wissen"
+    },
+    "table": {
+      "title": "Uw bestellingen",
+      "orderId": "Bestel-ID",
+      "created": "Aangemaakt",
+      "deliveryDate": "Leverdatum",
+      "status": "Status",
+      "estimatedTotal": "Geschat totaal",
+      "actions": "Acties",
+      "view": "Bekijken",
+      "noOrders": "Geen bestellingen gevonden."
+    },
+    "detail": {
+      "title": "Bestelling #{orderId}",
+      "subtitle": "Bekijk de status en totalen van uw bestelling.",
+      "backToList": "Terug naar bestellingen",
+      "info": {
+        "title": "Bestelinformatie",
+        "status": "Status",
+        "created": "Aangemaakt",
+        "deliveryDate": "Leverdatum",
+        "estimatedTotal": "Geschat totaal",
+        "finalTotal": "Eindtotaal",
+        "notes": "Bestelnotities"
+      },
+      "items": {
+        "title": "Bestelregels",
+        "table": {
+          "product": "Product",
+          "quantity": "Hoeveelheid",
+          "unitPrice": "Eenheidsprijs",
+          "subtotal": "Subtotaal"
+        }
+      },
+      "modify": "Bestelling aanpassen",
+      "cancel": "Bestelling annuleren",
+      "cancelConfirm": {
+        "title": "Deze bestelling annuleren?",
+        "description": "Deze actie zal uw bestelling annuleren. U kunt daarna een nieuwe bestelling aanmaken.",
+        "confirm": "Ja, bestelling annuleren",
+        "back": "Nee, bestelling behouden"
+      },
+      "cancelSuccess": "Bestelling succesvol geannuleerd",
+      "cancelError": "Annuleren van bestelling mislukt"
+      }
+
+  },
+  "employeeDashboard": {
+    "title": "Operaties van vandaag",
+    "subtitle": "Volg bestellingen, logistiek en teamactiviteit in één oogopslag.",
+    "ordersPending": "Openstaande bestellingen",
+    "ordersPendingNote": "Bestellingen in afwachting van beoordeling en bevestiging.",
+    "ordersToday": "Leveringen vandaag",
+    "ordersTodayNote": "Bestellingen gepland voor levering vandaag.",
+    "clientsActive": "Actieve klanten",
+    "clientsActiveNote": "Totaal aantal actieve klantaccounts.",
+    "pendingValue": "Waarde van openstaande bestellingen",
+    "pendingValueNote": "Totale geschatte waarde in afwachting van bevestiging.",
+    "monthOrdersCount": "Bestellingen deze maand",
+    "monthOrdersCountNote": "Aantal bestellingen dat deze maand is aangemaakt.",
+    "monthOrdersValue": "Bestelwaarde deze maand",
+    "monthOrdersValueNote": "Totale geschatte waarde van bestellingen die deze maand zijn aangemaakt.",
+    "pendingOrdersList": "Openstaande bestellingen",
+    "pendingOrdersEmpty": "Er zijn momenteel geen openstaande bestellingen.",
+    "viewOrders": "Bestellingen bekijken",
+    "quickStats": "Overzicht",
+    "detailedAnalytics": "Gedetailleerde statistieken",
+    "charts": {
+      "categoryTitle": "Categorieverdeling",
+      "categoryDescription": "Top 6 meest bestelde categorieën",
+      "statusTitle": "Bestellingsstatussen",
+      "statusDescription": "Verdeling van bestellingen per status",
+      "noData": "Geen gegevens beschikbaar",
+      "countLabel": "Aantal"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "confirmed": "Bevestigd",
+      "shipped": "Verzonden",
+      "delivered": "Geleverd",
+      "cancelled": "Geannuleerd"
+    }
+  },
+  "employeeOrders": {
+    "title": "Bestellingenbeheer",
+    "subtitle": "Bekijk, filter en beheer alle bestellingen.",
+    "filters": {
+      "title": "Filters",
+      "status": "Status",
+      "orderId": "Bestel-ID",
+      "orderIdPlaceholder": "Zoeken op bestel-ID...",
+      "client": "Klant",
+      "clientPlaceholder": "Zoeken op klantnaam of e-mail...",
+      "dateFrom": "Leverdatum vanaf",
+      "dateTo": "Leverdatum tot",
+      "deliveryDateFrom": "Leverdatum vanaf",
+      "deliveryDateTo": "Leverdatum tot",
+      "createdFrom": "Aangemaakt vanaf",
+      "createdTo": "Aangemaakt tot",
+      "showDateFilters": "Datumfilters tonen",
+      "hideDateFilters": "Datumfilters verbergen",
+      "apply": "Filters toepassen",
+      "clear": "Filters wissen",
+      "all": "Alle",
+      "pending": "In afwachting",
+      "confirmed": "Bevestigd",
+      "shipped": "Verzonden",
+      "delivered": "Geleverd",
+      "cancelled": "Geannuleerd"
+    },
+    "table": {
+      "orderId": "Bestel-ID",
+      "client": "Klant",
+      "created": "Aangemaakt",
+      "deliveryDate": "Leverdatum",
+      "status": "Status",
+      "estimatedTotal": "Geschat totaal",
+      "actions": "Acties",
+      "view": "Bekijken",
+      "noOrders": "Geen bestellingen gevonden."
+    },
+    "status": {
+      "pending": "In afwachting",
+      "confirmed": "Bevestigd",
+      "shipped": "Verzonden",
+      "delivered": "Geleverd",
+      "cancelled": "Geannuleerd",
+      "unknown": "Onbekend"
+    },
+    "detail": {
+      "title": "Bestelling #{orderId}",
+      "subtitle": "Bekijk en beheer bestelgegevens.",
+      "backToList": "Terug naar bestellingen",
+      "items": {
+        "title": "Bestelregels",
+        "table": {
+          "product": "Product",
+          "quantity": "Hoeveelheid",
+          "unitPrice": "Eenheidsprijs",
+          "subtotal": "Subtotaal"
+        }
+      },
+      "info": {
+        "title": "Bestelinformatie",
+        "status": "Status",
+        "created": "Aangemaakt",
+        "deliveryDate": "Leverdatum",
+        "estimatedTotal": "Geschat totaal",
+        "finalTotal": "Eindtotaal"
+      },
+      "client": {
+        "title": "Klantinformatie",
+        "company": "Bedrijf",
+        "contact": "Contact",
+        "email": "E-mail"
+      },
+      "print": "Bestelling afdrukken",
+      "update": {
+        "title": "Bestelling bijwerken",
+        "subtitle": "Wijzig status, eindtotaal of notities.",
+        "status": {
+          "label": "Status",
+          "placeholder": "Selecteer status",
+          "pending": "In afwachting",
+          "confirmed": "Bevestigd",
+          "shipped": "Verzonden",
+          "delivered": "Geleverd",
+          "cancelled": "Geannuleerd"
+        },
+        "finalTotal": {
+          "label": "Eindtotaal",
+          "placeholder": "Voer eindtotaal in na weging"
+        },
+        "notes": {
+          "label": "Notities",
+          "placeholder": "Voeg bestelnotities toe of werk bij"
+        },
+        "submit": "Bestelling bijwerken",
+        "submitting": "Bijwerken...",
+        "success": "Bestelling succesvol bijgewerkt.",
+        "updateSuccess": "Bestelling succesvol bijgewerkt!",
+        "errors": {
+          "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+          "not-found": "Bestelling niet gevonden.",
+          "update-error": "Bijwerken mislukt. Probeer het opnieuw.",
+          "unauthorized": "U heeft geen toestemming om deze bestelling bij te werken."
+        }
+      }
+    }
+  },
+  "clientRoles": {
+    "title": "Klantrollen",
+    "subtitle": "Beheer klantroltypen en hun standaardinstellingen.",
+    "createNew": "Nieuwe rol maken",
+    "noRoles": "Geen klantrollen gevonden. Maak uw eerste rol om te beginnen.",
+    "defaultDeliveryDays": "Standaard leverdagen",
+    "clientCount": "Klanten",
+    "viewDetails": "Details bekijken",
+    "backToList": "Terug naar rollen",
+    "create": {
+      "title": "Klantrol maken",
+      "subtitle": "Voeg een nieuw klantroltype toe aan het systeem."
+    },
+    "edit": {
+      "title": "Klantrol bewerken",
+      "subtitle": "Werk rolgegevens en instellingen bij."
+    },
+    "form": {
+      "title": "Rolgegevens",
+      "subtitle": "Vul de roldetails in alle ondersteunde talen in.",
+      "name": {
+        "fr": "Naam (Frans)",
+        "nl": "Naam (Nederlands)",
+        "en": "Naam (Engels)"
+      },
+      "slug": {
+        "label": "Slug",
+        "description": "Unieke identifier (alleen kleine letters, cijfers, streepjes). Kan niet worden gewijzigd na aanmaak."
+      },
+      "description": {
+        "fr": "Beschrijving (Frans)",
+        "nl": "Beschrijving (Nederlands)",
+        "en": "Beschrijving (Engels)"
+      },
+      "deliveryDays": {
+        "label": "Standaard leverdagen",
+        "description": "Selecteer de standaard leverdagen voor klanten met deze rol.",
+        "monday": "Maandag",
+        "tuesday": "Dinsdag",
+        "wednesday": "Woensdag",
+        "thursday": "Donderdag",
+        "friday": "Vrijdag",
+        "saturday": "Zaterdag",
+        "sunday": "Zondag"
+      },
+      "create": "Rol maken",
+      "update": "Rol bijwerken",
+      "creating": "Maken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Rol succesvol aangemaakt!",
+      "updateSuccess": "Rol succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "slug-exists": "Een rol met deze slug bestaat al.",
+        "create-error": "Rol aanmaken mislukt. Probeer het opnieuw.",
+        "update-error": "Bijwerken mislukt. Probeer het opnieuw.",
+        "not-found": "Rol niet gevonden.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    },
+    "delete": {
+      "title": "Rol verwijderen",
+      "subtitle": "Verwijder deze rol permanent uit het systeem.",
+      "button": "Rol verwijderen",
+      "confirm": "Ja, verwijderen",
+      "cancel": "Annuleren",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u de rol \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cannotDeleteOne": "Deze rol kan niet worden verwijderd omdat deze wordt gebruikt door {count} klant.",
+      "cannotDeleteMany": "Deze rol kan niet worden verwijderd omdat deze wordt gebruikt door {count} klanten.",
+      "successMessage": "Rol succesvol verwijderd!",
+      "errorMessage": "Verwijderen mislukt. Probeer het opnieuw.",
+      "errors": {
+        "not-found": "Rol niet gevonden.",
+        "has-clients": "Kan rol niet verwijderen die aan klanten is toegewezen.",
+        "delete-error": "Verwijderen mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om rollen te verwijderen."
+      }
+    }
+  },
+  "categories": {
+    "title": "Categorieën",
+    "subtitle": "Beheer productcategorieën en hun vertalingen.",
+    "createNew": "Nieuwe categorie maken",
+    "noCategories": "Geen categorieën gevonden. Maak uw eerste categorie om te beginnen.",
+    "productCount": "Producten",
+    "description": "Beschrijving",
+    "view": "Bekijken",
+    "viewDetails": "Details bekijken",
+    "backToList": "Terug naar categorieën",
+    "create": {
+      "title": "Categorie maken",
+      "subtitle": "Voeg een nieuwe productcategorie toe aan het systeem."
+    },
+    "edit": {
+      "title": "Categorie bewerken",
+      "subtitle": "Werk categoriegegevens bij."
+    },
+    "detail": {
+      "title": "Categoriegegevens",
+      "subtitle": "Bekijk categoriegegevens.",
+      "name": "Naam",
+      "description": "Beschrijving"
+    },
+    "products": {
+      "title": "Producten in deze categorie",
+      "subtitle": "Er {count, plural, =1 {is # product} other {zijn # producten}} in deze categorie.",
+      "table": {
+        "sku": "SKU",
+        "name": "Naam",
+        "price": "Prijs",
+        "unit": "Eenheid",
+        "status": "Status",
+        "active": "Actief",
+        "inactive": "Inactief",
+        "actions": "Acties",
+        "edit": "Bewerken"
+      }
+    },
+    "form": {
+      "title": "Categoriegegevens",
+      "subtitle": "Vul de categoriegegevens in alle ondersteunde talen in.",
+      "name": {
+        "fr": "Naam (Frans)",
+        "nl": "Naam (Nederlands)",
+        "en": "Naam (Engels)"
+      },
+      "description": {
+        "fr": "Beschrijving (Frans)",
+        "nl": "Beschrijving (Nederlands)",
+        "en": "Beschrijving (Engels)"
+      },
+      "create": "Categorie maken",
+      "update": "Categorie bijwerken",
+      "creating": "Maken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Categorie succesvol aangemaakt!",
+      "updateSuccess": "Categorie succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "create-error": "Categorie aanmaken mislukt. Probeer het opnieuw.",
+        "update-error": "Bijwerken mislukt. Probeer het opnieuw.",
+        "not-found": "Categorie niet gevonden.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    },
+    "delete": {
+      "title": "Categorie verwijderen",
+      "subtitle": "Verwijder deze categorie permanent uit het systeem.",
+      "button": "Categorie verwijderen",
+      "confirm": "Ja, verwijderen",
+      "cancel": "Annuleren",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u de categorie \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cannotDeleteOne": "Deze categorie kan niet worden verwijderd omdat deze wordt gebruikt door {count} product.",
+      "cannotDeleteMany": "Deze categorie kan niet worden verwijderd omdat deze wordt gebruikt door {count} producten.",
+      "successMessage": "Categorie succesvol verwijderd!",
+      "errorMessage": "Verwijderen mislukt. Probeer het opnieuw.",
+      "errors": {
+        "not-found": "Categorie niet gevonden.",
+        "has-products": "Kan categorie niet verwijderen die aan producten is toegewezen.",
+        "delete-error": "Verwijderen mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om categorieën te verwijderen."
+      }
+    }
+  },
+  "employeeClients": {
+    "title": "Klantenbeheer",
+    "subtitle": "Beheer klantaccounts en hun gegevens.",
+    "createNew": "Nieuwe klant maken",
+    "noClients": "Geen klanten gevonden. Maak uw eerste klant om te beginnen.",
+    "search": {
+      "placeholder": "Zoek klanten op naam, e-mail of bedrijf..."
+    },
+    "filters": {
+      "searchPlaceholder": "Zoek klanten op naam, e-mail, bedrijf of rol...",
+      "roleLabel": "Rol",
+      "allRoles": "Alle rollen"
+    },
+    "backToList": "Terug naar klanten",
+    "create": {
+      "title": "Klant maken",
+      "subtitle": "Voeg een nieuw klantaccount toe aan het systeem."
+    },
+    "edit": {
+      "title": "Klant bewerken",
+      "subtitle": "Werk klantgegevens en instellingen bij."
+    },
+    "form": {
+      "title": "Klantgegevens",
+      "subtitle": "Vul de klantgegevens in. Er wordt een e-mail verzonden om het wachtwoord in te stellen.",
+      "email": {
+        "label": "E-mail",
+        "description": "Gebruikt voor inloggen. Er wordt een e-mail voor wachtwoordinstelling verzonden.",
+        "descriptionEdit": "E-mail kan niet worden gewijzigd na aanmaak."
+      },
+      "companyName": {
+        "label": "Bedrijfsnaam"
+      },
+      "contactName": {
+        "label": "Contactnaam"
+      },
+      "contactPhone": {
+        "label": "Telefoon"
+      },
+      "contactMobile": {
+        "label": "Mobiel"
+      },
+      "role": {
+        "label": "Klantrol",
+        "placeholder": "Selecteer een rol"
+      },
+      "remise": {
+        "label": "Korting (%)",
+        "description": "Percentage korting toegepast op basisprijzen."
+      },
+      "preferredLocale": {
+        "label": "Voorkeurstaal"
+      },
+      "tvaNumber": {
+        "label": "BTW-nummer"
+      },
+      "billingAddress": {
+        "title": "Factuuradres",
+        "street": "Straat",
+        "city": "Stad",
+        "postalCode": "Postcode",
+        "country": "Land",
+        "different": "Factuuradres verschilt van verzendadres",
+        "differentDescription": "Vink dit aan als het factuuradres verschilt van het verzendadres"
+      },
+      "shippingAddress": {
+        "title": "Verzendadres",
+        "street": "Straat",
+        "city": "Stad",
+        "postalCode": "Postcode",
+        "country": "Land"
+      },
+      "deliveryDays": {
+        "label": "Leverdagen",
+        "description": "Selecteer de leverdagen voor deze klant. Standaard van rol indien niet gespecificeerd.",
+        "monday": "Maandag",
+        "tuesday": "Dinsdag",
+        "wednesday": "Woensdag",
+        "thursday": "Donderdag",
+        "friday": "Vrijdag",
+        "saturday": "Zaterdag",
+        "sunday": "Zondag"
+      },
+      "create": "Klant maken",
+      "update": "Klant bijwerken",
+      "creating": "Maken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Klant succesvol aangemaakt! Er is een e-mail voor wachtwoordinstelling verzonden.",
+      "updateSuccess": "Klant succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "email-exists": "Een account met dit e-mailadres bestaat al.",
+        "role-not-found": "Geselecteerde rol niet gevonden.",
+        "user-creation-error": "Account aanmaken mislukt. Probeer het opnieuw.",
+        "client-creation-error": "Klantprofiel aanmaken mislukt. Probeer het opnieuw.",
+        "not-found": "Klant niet gevonden.",
+        "update-error": "Bijwerken mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    },
+    "table": {
+      "company": "Bedrijf",
+      "contact": "Contact",
+      "role": "Rol",
+      "email": "E-mail",
+      "created": "Aangemaakt",
+      "actions": "Acties",
+      "view": "Bekijken",
+      "edit": "Bewerken"
+    },
+    "detail": {
+      "title": "Klantgegevens",
+      "subtitle": "Bekijk klantgegevens.",
+      "info": {
+        "title": "Klantinformatie",
+        "created": "Aangemaakt",
+        "role": "Rol",
+        "deliveryDays": "Leverdagen",
+        "remise": "Korting"
+      }
+    },
+    "delete": {
+      "title": "Klant verwijderen",
+      "subtitle": "Verwijder deze klant permanent uit het systeem.",
+      "button": "Klant verwijderen",
+      "confirmDelete": "Verwijderen bevestigen",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u de klant \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cannotDelete": "Deze klant kan niet worden verwijderd omdat {count, plural, =1 {# bestelling bestaat} other {# bestellingen bestaan}}.",
+      "cancel": "Annuleren"
+    }
+  },
+  "employeeRoles": {
+    "title": "Medewerkerrollen",
+    "subtitle": "Beheer medewerkerrollen en hun rechten.",
+    "createNew": "Nieuwe rol aanmaken",
+    "noRoles": "Geen medewerkerrollen gevonden. Maak uw eerste rol aan om te beginnen.",
+    "employees": "Medewerkers",
+    "permissions": "Rechten",
+    "legend": "Beschikbare rechten die aan medewerkerrollen kunnen worden toegewezen.",
+    "viewDetails": "Details bekijken",
+    "backToList": "Terug naar rollen",
+    "create": {
+      "title": "Medewerkerrol aanmaken",
+      "subtitle": "Voeg een nieuwe medewerkerrol toe aan het systeem."
+    },
+    "edit": {
+      "title": "Medewerkerrol bewerken",
+      "subtitle": "Werk roldetails en rechten bij."
+    },
+    "delete": {
+      "title": "Medewerkerrol verwijderen",
+      "subtitle": "Verwijder deze rol permanent uit het systeem.",
+      "button": "Rol verwijderen",
+      "confirmDelete": "Verwijderen bevestigen",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u de rol \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cannotDelete": "Deze rol kan niet worden verwijderd omdat {count, plural, =1 {# medewerker eraan is} other {# medewerkers eraan zijn}} toegewezen.",
+      "cancel": "Annuleren",
+      "successMessage": "Medewerkerrol succesvol verwijderd!",
+      "errorMessage": "Verwijderen mislukt. Probeer het opnieuw."
+    },
+    "form": {
+      "title": "Rolgegevens",
+      "subtitle": "Vul de roldetails in alle ondersteunde talen in.",
+      "name": {
+        "fr": "Naam (Frans)",
+        "nl": "Naam (Nederlands)",
+        "en": "Naam (Engels)"
+      },
+      "permissions": {
+        "label": "Rechten",
+        "description": "Selecteer de rechten voor deze rol.",
+        "manage_settings": "Instellingen beheren",
+        "manage_client_roles": "Klantrollen beheren",
+        "manage_employee_roles": "Medewerkerrollen beheren",
+        "view_clients": "Klanten bekijken",
+        "manage_clients": "Klanten beheren",
+        "manage_employees": "Medewerkers beheren",
+        "manage_products": "Producten beheren",
+        "view_products": "Producten bekijken",
+        "view_orders": "Bestellingen bekijken",
+        "manage_orders": "Bestellingen beheren"
+      },
+      "create": "Rol aanmaken",
+      "update": "Rol bijwerken",
+      "creating": "Aanmaken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Rol succesvol aangemaakt.",
+      "updateSuccess": "Rol succesvol bijgewerkt.",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "create-error": "Rol aanmaken mislukt. Probeer het opnieuw.",
+        "not-found": "Rol niet gevonden.",
+        "update-error": "Rol bijwerken mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    }
+  },
+  "employeeEmployees": {
+    "title": "Medewerkerbeheer",
+    "subtitle": "Beheer medewerkeraccounts en hun gegevens.",
+    "createNew": "Nieuwe medewerker maken",
+    "noEmployees": "Geen medewerkers gevonden. Maak uw eerste medewerker aan om te beginnen.",
+    "search": {
+      "placeholder": "Zoek medewerkers op naam, e-mail of rol..."
+    },
+    "filters": {
+      "searchPlaceholder": "Zoek medewerkers op naam, e-mail of rol...",
+      "roleLabel": "Rol",
+      "allRoles": "Alle rollen"
+    },
+    "backToList": "Terug naar medewerkers",
+    "create": {
+      "title": "Medewerker maken",
+      "subtitle": "Voeg een nieuw medewerkeraccount toe aan het systeem."
+    },
+    "edit": {
+      "title": "Medewerker bewerken",
+      "subtitle": "Werk medewerkersgegevens en instellingen bij."
+    },
+    "form": {
+      "title": "Medewerkersgegevens",
+      "subtitle": "Vul de medewerkersgegevens in. Er wordt een e-mail verzonden om het wachtwoord in te stellen.",
+      "email": {
+        "label": "E-mail",
+        "description": "Gebruikt voor inloggen. Er wordt een e-mail voor het instellen van het wachtwoord verzonden.",
+        "descriptionEdit": "E-mail kan niet worden gewijzigd na aanmaak."
+      },
+      "fullName": {
+        "label": "Volledige naam"
+      },
+      "role": {
+        "label": "Medewerkerrol",
+        "placeholder": "Selecteer een rol"
+      },
+      "create": "Medewerker maken",
+      "update": "Medewerker bijwerken",
+      "creating": "Maken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Medewerker succesvol aangemaakt! Er is een e-mail voor het instellen van het wachtwoord verzonden.",
+      "updateSuccess": "Medewerker succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "email-exists": "Een account met dit e-mailadres bestaat al.",
+        "role-not-found": "Geselecteerde rol niet gevonden.",
+        "user-creation-error": "Account aanmaken mislukt. Probeer het opnieuw.",
+        "employee-creation-error": "Medewerkersprofiel aanmaken mislukt. Probeer het opnieuw.",
+        "not-found": "Medewerker niet gevonden.",
+        "update-error": "Medewerker bijwerken mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    },
+    "table": {
+      "name": "Naam",
+      "role": "Rol",
+      "email": "E-mail",
+      "created": "Aangemaakt",
+      "actions": "Acties",
+      "view": "Bekijken"
+    },
+    "delete": {
+      "title": "Medewerker verwijderen",
+      "subtitle": "Verwijder deze medewerker permanent uit het systeem.",
+      "button": "Medewerker verwijderen",
+      "confirmDelete": "Verwijderen bevestigen",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u de medewerker \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "errorMessage": "Medewerker verwijderen mislukt. Probeer het opnieuw.",
+      "cancel": "Annuleren"
+    }
+  },
+  "employeeSettings": {
+    "title": "Platforminstellingen",
+    "subtitle": "Configureer globale platforminstellingen zoals besteldeadlines en beschikbare machtigingen.",
+    "form": {
+      "title": "Instellingen",
+      "subtitle": "Werk de platformbrede configuratie bij.",
+      "cutoffTime": {
+        "label": "Besteldeadline",
+        "description": "Tijdstip van de dag waarop bestellingen moeten worden geplaatst (formaat: HH:mm). Bestellingen die na dit tijdstip worden geplaatst, worden gepland voor de volgende leveringscyclus."
+      },
+      "cutoffDayOffset": {
+        "label": "Deadline dagverschuiving",
+        "description": "Aantal dagen voor levering waarop bestellingen moeten worden geplaatst. Als dit bijvoorbeeld op 1 is ingesteld, moeten bestellingen 1 dag voor de leveringsdatum worden geplaatst."
+      },
+      "defaultLocale": {
+        "label": "Standaard taal",
+        "description": "Standaard taal voor het platform wanneer geen gebruikersvoorkeur is ingesteld."
+      },
+      "vatRate": {
+        "label": "BTW-tarief (%)",
+        "description": "BTW-tarief in percentage (bijv. 21 voor 21% BTW)."
+      },
+      "availableLocales": {
+        "label": "Beschikbare talen",
+        "description": "Selecteer welke talen beschikbaar zijn voor gebruikers om uit te kiezen."
+      },
+      "permissions": {
+        "label": "Beschikbare machtigingen",
+        "description": "Selecteer welke machtigingen beschikbaar zijn voor toewijzing aan medewerkersrollen. Niet aangevinkte machtigingen zijn niet beschikbaar bij het maken of bewerken van medewerkersrollen.",
+        "manage_settings": "Instellingen beheren",
+        "manage_client_roles": "Klantrollen beheren",
+        "manage_employee_roles": "Medewerkersrollen beheren",
+        "view_clients": "Klanten bekijken",
+        "manage_clients": "Klanten beheren",
+        "manage_employees": "Medewerkers beheren",
+        "manage_products": "Producten beheren",
+        "view_products": "Producten bekijken",
+        "view_orders": "Bestellingen bekijken",
+        "manage_orders": "Bestellingen beheren"
+      },
+      "units": {
+        "label": "Beschikbare eenheden",
+        "description": "Selecteer welke meeteenheden beschikbaar zijn voor producten. Niet aangevinkte eenheden zijn niet beschikbaar bij het maken of bewerken van producten."
+      },
+      "update": "Instellingen bijwerken",
+      "updating": "Bijwerken...",
+      "updateSuccess": "Instellingen succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "update-error": "Bijwerken van instellingen mislukt. Probeer het opnieuw.",
+        "unauthorized": "U heeft geen toestemming om instellingen te beheren."
+      }
+    }
+  },
+  "employeeProducts": {
+    "title": "Producten",
+    "subtitle": "Beheer productcatalogus, prijzen en zichtbaarheid.",
+    "createNew": "Nieuw product maken",
+    "noProducts": "Geen producten gevonden. Maak uw eerste product om te beginnen.",
+    "search": {
+      "placeholder": "Zoek producten op naam, SKU of categorie..."
+    },
+    "filters": {
+      "searchPlaceholder": "Zoek producten op naam, SKU of categorie...",
+      "categoryLabel": "Categorie",
+      "allCategories": "Alle categorieën",
+      "statusLabel": "Status",
+      "allStatuses": "Alle statussen",
+      "status": {
+        "active": "Actief",
+        "inactive": "Inactief"
+      },
+      "sortLabel": "Sorteren op",
+      "sort": {
+        "createdDesc": "Nieuwste",
+        "nameAsc": "Naam A → Z",
+        "nameDesc": "Naam Z → A",
+        "priceAsc": "Prijs: laag naar hoog",
+        "priceDesc": "Prijs: hoog naar laag"
+      }
+    },
+    "backToList": "Terug naar producten",
+    "create": {
+      "title": "Product maken",
+      "subtitle": "Voeg een nieuw product toe aan de catalogus."
+    },
+    "edit": {
+      "title": "Product bewerken",
+      "subtitle": "Werk productgegevens en instellingen bij."
+    },
+    "detail": {
+      "title": "Productgegevens",
+      "subtitle": "Bekijk productgegevens.",
+      "name": "Naam",
+      "description": "Beschrijving"
+    },
+    "form": {
+      "title": "Productgegevens",
+      "subtitle": "Vul de productgegevens in alle ondersteunde talen in.",
+      "sku": {
+        "label": "SKU",
+        "description": "Productcode of identifier (optioneel)."
+      },
+      "category": {
+        "label": "Categorie",
+        "placeholder": "Selecteer een categorie"
+      },
+      "name": {
+        "fr": "Naam (Frans)",
+        "nl": "Naam (Nederlands)",
+        "en": "Naam (Engels)"
+      },
+      "description": {
+        "fr": "Beschrijving (Frans)",
+        "nl": "Beschrijving (Nederlands)",
+        "en": "Beschrijving (Engels)"
+      },
+      "basePrice": {
+        "label": "Basisprijs",
+        "description": "Prijs per kg in euro's (zelfs als de eenheid stuk, doos, etc. is)."
+      },
+      "unit": {
+        "label": "Eenheid",
+        "description": "Meeteenheid (bijv. kg, stuk, doos, bos).",
+        "placeholder": "Selecteer een eenheid"
+      },
+      "approximateWeight": {
+        "label": "Geschat gewicht",
+        "description": "Geschat gewicht in kg (voor artikelen die per stuk worden verkocht maar per gewicht worden geprijsd)."
+      },
+      "imageUrl": {
+        "label": "Productafbeelding",
+        "description": "Upload een afbeelding voor het product (JPEG, PNG of WebP, max 5MB).",
+        "uploading": "Afbeelding uploaden...",
+        "remove": "Afbeelding verwijderen"
+      },
+      "visibleTo": {
+        "label": "Zichtbaar voor",
+        "description": "Selecteer welke klantrollen dit product kunnen zien. Laat alles uitgeschakeld om het zichtbaar te maken voor alle klanten.",
+        "allClients": "Zichtbaar voor alle klanten (geen rollen geselecteerd).",
+        "selectedClients": "Zichtbaar voor {count} geselecteerde klantrol(len)."
+      },
+      "active": {
+        "label": "Actief",
+        "description": "Alleen actieve producten zijn zichtbaar voor klanten."
+      },
+      "create": "Product maken",
+      "update": "Product bijwerken",
+      "creating": "Maken...",
+      "updating": "Bijwerken...",
+      "cancel": "Annuleren",
+      "createSuccess": "Product succesvol aangemaakt!",
+      "updateSuccess": "Product succesvol bijgewerkt!",
+      "errors": {
+        "validation-error": "Ongeldige formuliergegevens. Controleer uw invoer.",
+        "create-error": "Product aanmaken mislukt. Probeer het opnieuw.",
+        "update-error": "Bijwerken mislukt. Probeer het opnieuw.",
+        "not-found": "Product niet gevonden.",
+        "unauthorized": "U heeft geen toestemming om deze actie uit te voeren."
+      }
+    },
+    "table": {
+      "image": "Afbeelding",
+      "sku": "SKU",
+      "name": "Naam",
+      "category": "Categorie",
+      "price": "Prijs",
+      "unit": "Eenheid",
+      "status": "Status",
+      "active": "Actief",
+      "inactive": "Inactief",
+      "actions": "Acties",
+      "edit": "Bewerken",
+      "view": "Bekijken"
+    },
+    "delete": {
+      "title": "Product verwijderen",
+      "subtitle": "Verwijder dit product permanent uit de catalogus.",
+      "button": "Product verwijderen",
+      "confirmDelete": "Verwijderen bevestigen",
+      "deleting": "Verwijderen...",
+      "confirmMessage": "Weet u zeker dat u het product \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cannotDelete": "Dit product kan niet worden verwijderd omdat {count, plural, =1 {# bestelling het gebruikt} other {# bestellingen het gebruiken}}.",
+      "cancel": "Annuleren"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "subtitle": "Vul uw gegevens in om toegang te krijgen tot uw account.",
+      "emailLabel": "E-mail",
+      "passwordLabel": "Wachtwoord",
+      "submit": "Inloggen",
+      "loading": "Bezig met inloggen...",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "errors": {
+        "invalidCredentials": "We konden geen account vinden met deze gegevens.",
+        "unknown": "Er is iets misgegaan. Probeer het opnieuw."
+      }
+    },
+    "setPassword": {
+      "title": "Stel uw wachtwoord in",
+      "subtitle": "Maak een veilig wachtwoord aan voor uw account",
+      "passwordLabel": "Wachtwoord",
+      "confirmPasswordLabel": "Bevestig wachtwoord",
+      "submit": "Wachtwoord instellen",
+      "submitting": "Wachtwoord instellen…",
+      "verifying": "Uitnodigingslink verifiëren…",
+      "errors": {
+        "invalidLink": "Ongeldige of verlopen uitnodigingslink. Neem contact op met de ondersteuning.",
+        "updateFailed": "Wachtwoord instellen mislukt. Probeer het opnieuw.",
+        "unknown": "Er is een fout opgetreden. Probeer het opnieuw."
+      }
+    },
+    "resetPassword": {
+      "title": "Wachtwoord resetten",
+      "subtitle": "Voer uw e-mailadres in en we sturen u een link om uw wachtwoord te resetten.",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "Uw e-mailadres",
+      "description": "Voer uw e-mailadres in en we sturen u een link om uw wachtwoord te resetten.",
+      "submit": "Link verzenden",
+      "sending": "Verzenden...",
+      "cancel": "Annuleren",
+      "backToLogin": "Terug naar inloggen",
+      "successMessage": "Als een account bestaat met dit e-mailadres, is er een resetlink verzonden. Controleer uw inbox.",
+      "errorMessage": "Er is een fout opgetreden. Probeer het opnieuw."
+    }
+  },
+  "unauthorized": {
+    "title": "Ongeautoriseerde toegang",
+    "description": "U heeft geen toestemming om deze bron te openen. Neem contact op met een beheerder als u denkt dat dit een fout is.",
+    "backToDashboard": "Terug naar dashboard"
+  }
+}
+

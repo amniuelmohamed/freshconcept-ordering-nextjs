@@ -1,0 +1,1132 @@
+{
+  "app": {
+    "name": "Fresh Concept",
+    "welcome": "Bienvenue sur votre portail de commandes."
+  },
+  "search": {
+    "searchPlaceholder": "Rechercher...",
+    "searching": "Recherche en cours",
+    "typeToSearch": "Tapez au moins 2 caractères pour rechercher",
+    "noResults": "Aucun résultat trouvé",
+    "types": {
+      "product": "Produits",
+      "order": "Commandes",
+      "client": "Clients",
+      "favorite": "Favoris",
+      "employee": "Employés",
+      "category": "Catégories"
+    }
+  },
+  "navigation": {
+    "common": {
+      "appName": "Fresh Concept",
+      "signOut": "Se déconnecter"
+    },
+    "client": {
+      "dashboard": "Tableau de bord",
+      "quickOrder": "Commande rapide",
+      "orders": "Commandes",
+      "favorites": "Favoris",
+      "profile": "Profil"
+    },
+      "employee": {
+        "dashboard": "Tableau de bord",
+        "orders": "Commandes",
+        "clients": "Clients",
+        "clientRoles": "Rôles clients",
+        "products": "Produits",
+        "categories": "Catégories",
+        "employees": "Employés",
+        "employeeRoles": "Rôles employés",
+        "settings": "Paramètres"
+      }
+  },
+  "quickOrder": {
+    "title": "Commande rapide",
+    "subtitle": "Parcourez les produits, ajustez les quantités et préparez votre prochaine livraison.",
+    "searchPlaceholder": "Rechercher un produit",
+    "favorites": "Favoris",
+    "filters": {
+      "all": "Tous les produits"
+    },
+    "empty": {
+      "title": "Aucun produit ne correspond à vos filtres.",
+      "subtitle": "Modifiez votre recherche ou sélectionnez une autre catégorie."
+    },
+    "summary": {
+      "items": "{count} articles",
+      "review": "Vérifier la commande"
+    },
+    "badges": {
+      "favorite": "Favori"
+    },
+    "product": {
+      "image": "Image",
+      "pricePerKg": "{price} / kg",
+      "approxWeight": "Poids approx. {weight} kg",
+      "sku": "SKU {value}",
+      "packaging": "Emballage",
+      "unit": "Unité",
+      "name": "Produit",
+      "category": "Catégorie",
+      "price": "Prix",
+      "quantity": "Quantité"
+    },
+    "loading": "Chargement des produits…",
+    "sort": {
+      "relevance": "Pertinence",
+      "nameAsc": "Nom A → Z",
+      "nameDesc": "Nom Z → A",
+      "priceAsc": "Prix croissant",
+      "priceDesc": "Prix décroissant"
+    }
+  },
+  "checkout": {
+    "badge": "Validation",
+    "title": "Vérifiez votre commande",
+    "subtitle": "Confirmez les quantités, ajoutez des notes de livraison et envoyez la commande à notre équipe.",
+    "empty": {
+      "title": "Votre panier est vide",
+      "subtitle": "Ajoutez des articles depuis la commande rapide avant de valider.",
+      "cta": "Voir les produits"
+    },
+    "items": {
+      "heading": "Récapitulatif",
+      "table": {
+        "product": "Produit",
+        "quantity": "Quantité",
+        "packaging": "Emballage",
+        "unit": "Unité",
+        "unitPrice": "Prix / kg",
+        "subtotal": "Sous-total"
+      },
+      "sku": "SKU {value}",
+      "unit": "Unité : {value}"
+    },
+    "summary": {
+      "heading": "Totaux",
+      "items": "{count} articles",
+      "subtotalExclVat": "Sous-total HT",
+      "vat": "TVA ({rate}%)",
+      "estimatedTotal": "Total estimé TTC",
+      "estimatedTotalLabel": "Total estimé"
+    },
+    "details": {
+      "heading": "Détails de livraison",
+      "deliveryDate": "Prochaine date de livraison",
+      "deliveryDateValue": "Livraison prévue le {value}",
+      "deliveryDatePending": "Nous vous confirmons votre créneau très bientôt.",
+      "deliveryHint": "Selon le planning de livraison convenu.",
+      "notes": "Notes de commande",
+      "notesPlaceholder": "Instructions facultatives pour la préparation, l’emballage ou la livraison.",
+      "notesHint": "500 caractères maximum."
+    },
+    "actions": {
+      "back": "Continuer les achats",
+      "submit": "Passer la commande",
+      "submitting": "Commande en cours...",
+      "submitUpdate": "Modifier la commande",
+      "submittingUpdate": "Modification en cours..."
+    },
+    "messages": {
+      "cartEmpty": "Votre panier est vide.",
+      "validationError": "Des informations sont manquantes ou invalides.",
+      "productMismatch": "Un produit n'est plus disponible. Actualisez la commande rapide.",
+      "genericError": "Impossible d'enregistrer la commande. Veuillez réessayer.",
+      "submitSuccess": "Commande créée avec succès !",
+      "updateSuccess": "Commande modifiée avec succès !"
+    }
+  },
+  "clientDashboard": {
+    "title": "Bon retour parmi nous",
+    "subtitle": "Un aperçu rapide de votre compte.",
+    "nextDelivery": "Prochaine livraison",
+    "noDeliveryDays": "Aucun jour de livraison configuré",
+    "deliveriesNote": "Basé sur vos jours de livraison configurés",
+    "pendingOrder": "Commande en attente",
+    "noPendingOrder": "Aucune",
+    "viewPendingOrder": "Voir la commande",
+    "pendingOrderNote": "Vous n'avez pas de commande en attente",
+    "favoriteProducts": "Produits favoris",
+    "favoriteNote": "Accédez rapidement à vos produits favoris",
+    "monthOrders": "Commandes ce mois-ci",
+    "monthOrdersNote": "Nombre de commandes passées ce mois",
+    "recentOrdersTitle": "Commandes récentes",
+    "recentOrdersDescription": "Vos 5 dernières commandes",
+    "viewAllOrders": "Voir toutes les commandes",
+    "orderNumber": "Commande #{id}",
+    "view": "Voir",
+    "noRecentOrders": "Aucune commande récente",
+    "noRecentOrdersHelper": "Commencez par créer votre première commande",
+    "noRecentOrdersAction": "Commander maintenant",
+    "favoriteProductsTitle": "Produits favoris",
+    "favoriteProductsDescription": "Vos produits favoris",
+    "viewAllFavorites": "Voir tous les favoris",
+    "noFavoriteProducts": "Aucun produit favori",
+    "noFavoriteProductsHelper": "Ajoutez vos produits préférés pour un accès rapide",
+    "noFavoriteProductsAction": "Découvrir les produits",
+    "orderNow": "Commander maintenant",
+    "modifyOrder": "Modifier",
+    "pendingOrderInProgress": "Commande en cours de préparation",
+    "quickStats": "Vue d'ensemble",
+    "monthTotal": "Total du mois"
+  },
+  "clientProfile": {
+    "title": "Mon profil",
+    "subtitle": "Gérez vos informations de compte et vos préférences.",
+    "sections": {
+      "info": "Informations du profil",
+      "password": "Changer le mot de passe",
+      "passwordDescription": "Modifiez votre mot de passe en saisissant votre mot de passe actuel et un nouveau mot de passe.",
+      "resetPasswordDescription": "Si vous avez oublié votre mot de passe, vous pouvez demander un lien de réinitialisation par e-mail.",
+      "delivery": "Informations de livraison"
+    },
+    "form": {
+      "companyName": "Nom de l'entreprise",
+      "contactName": "Nom du contact",
+      "contactEmail": "Adresse e-mail",
+      "emailReadOnly": "L'adresse e-mail ne peut pas être modifiée car elle est votre identifiant de connexion",
+      "phone": "Numéro de téléphone",
+      "mobile": "Numéro de mobile",
+      "street": "Adresse (rue)",
+      "city": "Ville",
+      "postalCode": "Code postal",
+      "country": "Pays",
+      "preferredLocale": "Langue préférée",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le nouveau mot de passe",
+      "saveProfile": "Enregistrer les modifications",
+      "savingProfile": "Enregistrement...",
+      "changePassword": "Changer le mot de passe",
+      "changingPassword": "Modification...",
+      "resetPassword": "Réinitialiser le mot de passe",
+      "resettingPassword": "Envoi en cours..."
+    },
+    "delivery": {
+      "title": "Jours de livraison",
+      "description": "Vos commandes seront livrées les jours suivants :",
+      "noDays": "Aucun jour de livraison configuré. Veuillez contacter le support.",
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "messages": {
+      "profileSuccess": "Profil mis à jour avec succès",
+      "profileError": "Échec de la mise à jour du profil",
+      "passwordSuccess": "Mot de passe modifié avec succès",
+      "passwordError": "Échec de la modification du mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+      "resetPasswordSuccess": "Un e-mail de réinitialisation de mot de passe a été envoyé. Vérifiez votre boîte de réception.",
+      "resetPasswordError": "Échec de l'envoi de l'e-mail de réinitialisation. Veuillez réessayer."
+    }
+  },
+  "clientOrders": {
+    "title": "Historique des commandes",
+    "subtitle": "Consultez vos commandes passées et leurs statuts.",
+    "empty": {
+      "title": "Aucune commande pour le moment",
+      "subtitle": "Vous n'avez pas encore passé de commande. Commencez par remplir votre panier depuis la commande rapide.",
+      "cta": "Voir les produits"
+    },
+    "filters": {
+      "status": "Statut",
+      "all": "Tous",
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée",
+      "orderId": "ID commande",
+      "orderIdPlaceholder": "Rechercher par ID...",
+      "sortLabel": "Trier par",
+      "sort": {
+        "createdDesc": "Date de création (récent)",
+        "createdAsc": "Date de création (ancien)",
+        "deliveryDesc": "Date de livraison (récent)",
+        "deliveryAsc": "Date de livraison (ancien)",
+        "amountDesc": "Montant (décroissant)",
+        "amountAsc": "Montant (croissant)"
+      },
+      "deliveryDateFrom": "Date de livraison de début",
+      "deliveryDateTo": "Date de livraison de fin",
+      "createdFrom": "Créée à partir de",
+      "createdTo": "Créée jusqu'à",
+      "showDateFilters": "Afficher les filtres de dates",
+      "hideDateFilters": "Masquer les filtres de dates",
+      "apply": "Appliquer les filtres",
+      "clear": "Effacer les filtres"
+    },
+    "table": {
+      "title": "Vos commandes",
+      "orderId": "ID commande",
+      "created": "Créée le",
+      "deliveryDate": "Date de livraison",
+      "status": "Statut",
+      "estimatedTotal": "Total estimé",
+      "actions": "Actions",
+      "view": "Voir",
+      "noOrders": "Aucune commande trouvée."
+    },
+    "detail": {
+      "title": "Commande #{orderId}",
+      "subtitle": "Consultez le statut et les montants de votre commande.",
+      "backToList": "Retour aux commandes",
+      "info": {
+        "title": "Informations de la commande",
+        "status": "Statut",
+        "created": "Créée le",
+        "deliveryDate": "Date de livraison",
+        "estimatedTotal": "Total estimé",
+        "finalTotal": "Total final",
+        "notes": "Notes de commande"
+      },
+      "items": {
+        "title": "Articles de la commande",
+        "table": {
+          "product": "Produit",
+          "quantity": "Quantité",
+          "unitPrice": "Prix unitaire",
+          "subtotal": "Sous-total"
+        }
+      },
+      "modify": "Modifier cette commande",
+      "cancel": "Annuler la commande",
+      "cancelConfirm": {
+        "title": "Annuler cette commande ?",
+        "description": "Cette action annulera votre commande. Vous pourrez créer une nouvelle commande par la suite.",
+        "confirm": "Oui, annuler la commande",
+        "back": "Non, conserver la commande"
+      },
+      "cancelSuccess": "Commande annulée avec succès",
+      "cancelError": "Échec de l'annulation de la commande"
+      }
+    
+  },
+  "employeeDashboard": {
+    "title": "Opérations du jour",
+    "subtitle": "Surveillez les commandes, la logistique et l'activité de l'équipe en un coup d'œil.",
+    "ordersPending": "Commandes en attente",
+    "ordersPendingNote": "Commandes en attente de validation et de confirmation.",
+    "ordersToday": "Livraisons aujourd'hui",
+    "ordersTodayNote": "Commandes prévues pour livraison aujourd'hui.",
+    "clientsActive": "Clients actifs",
+    "clientsActiveNote": "Nombre total de comptes clients actifs.",
+    "pendingValue": "Valeur des commandes en attente",
+    "pendingValueNote": "Valeur totale estimée en attente de confirmation.",
+    "monthOrdersCount": "Commandes ce mois-ci",
+    "monthOrdersCountNote": "Nombre de commandes créées ce mois-ci.",
+    "monthOrdersValue": "Valeur des commandes du mois",
+    "monthOrdersValueNote": "Valeur totale estimée des commandes créées ce mois-ci.",
+    "pendingOrdersList": "Commandes en attente",
+    "pendingOrdersEmpty": "Aucune commande en attente pour le moment.",
+    "viewOrders": "Voir les commandes",
+    "quickStats": "Vue d'ensemble",
+    "detailedAnalytics": "Statistiques détaillées",
+    "charts": {
+      "categoryTitle": "Distribution par catégorie",
+      "categoryDescription": "Top 6 des catégories les plus commandées",
+      "statusTitle": "Statuts des commandes",
+      "statusDescription": "Répartition des commandes par statut",
+      "noData": "Aucune donnée disponible",
+      "countLabel": "Nombre"
+    },
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    }
+  },
+  "employeeOrders": {
+    "title": "Gestion des commandes",
+    "subtitle": "Consulter, filtrer et gérer toutes les commandes.",
+    "filters": {
+      "title": "Filtres",
+      "status": "Statut",
+      "orderId": "ID Commande",
+      "orderIdPlaceholder": "Rechercher par ID de commande...",
+      "client": "Client",
+      "clientPlaceholder": "Rechercher par nom ou email du client...",
+      "dateFrom": "Date de livraison de début",
+      "dateTo": "Date de livraison de fin",
+      "deliveryDateFrom": "Date de livraison de début",
+      "deliveryDateTo": "Date de livraison de fin",
+      "createdFrom": "Créée à partir de",
+      "createdTo": "Créée jusqu'à",
+      "showDateFilters": "Afficher les filtres de dates",
+      "hideDateFilters": "Masquer les filtres de dates",
+      "apply": "Appliquer les filtres",
+      "clear": "Effacer les filtres",
+      "all": "Tous",
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+    "table": {
+      "orderId": "ID Commande",
+      "client": "Client",
+      "created": "Créée le",
+      "deliveryDate": "Date de livraison",
+      "status": "Statut",
+      "estimatedTotal": "Total estimé",
+      "actions": "Actions",
+      "view": "Voir",
+      "noOrders": "Aucune commande trouvée."
+    },
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée",
+      "unknown": "Inconnu"
+    },
+    "detail": {
+      "title": "Commande #{orderId}",
+      "subtitle": "Consulter et gérer les détails de la commande.",
+      "backToList": "Retour aux commandes",
+      "items": {
+        "title": "Articles de la commande",
+        "table": {
+          "product": "Produit",
+          "quantity": "Quantité",
+          "unitPrice": "Prix unitaire",
+          "subtotal": "Sous-total"
+        }
+      },
+      "info": {
+        "title": "Informations de la commande",
+        "status": "Statut",
+        "created": "Créée le",
+        "deliveryDate": "Date de livraison",
+        "estimatedTotal": "Total estimé",
+        "finalTotal": "Total final"
+      },
+      "client": {
+        "title": "Informations client",
+        "company": "Entreprise",
+        "contact": "Contact",
+        "email": "E-mail"
+      },
+      "print": "Imprimer la commande",
+      "update": {
+        "title": "Mettre à jour la commande",
+        "subtitle": "Modifier le statut, le total final ou les notes.",
+        "status": {
+          "label": "Statut",
+          "placeholder": "Sélectionner un statut",
+          "pending": "En attente",
+          "confirmed": "Confirmée",
+          "shipped": "Expédiée",
+          "delivered": "Livrée",
+          "cancelled": "Annulée"
+        },
+        "finalTotal": {
+          "label": "Total final",
+          "placeholder": "Entrer le total final après pesée"
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Ajouter ou modifier les notes de commande"
+        },
+        "submit": "Mettre à jour",
+        "submitting": "Mise à jour...",
+        "success": "Commande mise à jour avec succès.",
+        "updateSuccess": "Commande mise à jour avec succès !",
+        "errors": {
+          "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+          "not-found": "Commande introuvable.",
+          "update-error": "Échec de la mise à jour. Veuillez réessayer.",
+          "unauthorized": "Vous n'avez pas la permission de mettre à jour cette commande."
+        }
+      }
+    }
+  },
+  "clientRoles": {
+    "title": "Rôles clients",
+    "subtitle": "Gérer les types de rôles clients et leurs paramètres par défaut.",
+    "createNew": "Créer un nouveau rôle",
+    "noRoles": "Aucun rôle client trouvé. Créez votre premier rôle pour commencer.",
+    "defaultDeliveryDays": "Jours de livraison par défaut",
+    "clientCount": "Clients",
+    "viewDetails": "Voir les détails",
+    "backToList": "Retour aux rôles",
+    "create": {
+      "title": "Créer un rôle client",
+      "subtitle": "Ajouter un nouveau type de rôle client au système."
+    },
+    "edit": {
+      "title": "Modifier le rôle client",
+      "subtitle": "Mettre à jour les informations et paramètres du rôle."
+    },
+    "form": {
+      "title": "Informations du rôle",
+      "subtitle": "Remplissez les détails du rôle dans toutes les langues prises en charge.",
+      "name": {
+        "fr": "Nom (français)",
+        "nl": "Nom (néerlandais)",
+        "en": "Nom (anglais)"
+      },
+      "slug": {
+        "label": "Slug",
+        "description": "Identifiant unique (minuscules, chiffres, tirets uniquement). Ne peut pas être modifié après création."
+      },
+      "description": {
+        "fr": "Description (français)",
+        "nl": "Description (néerlandais)",
+        "en": "Description (anglais)"
+      },
+      "deliveryDays": {
+        "label": "Jours de livraison par défaut",
+        "description": "Sélectionnez les jours de livraison par défaut pour les clients avec ce rôle.",
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
+      },
+      "create": "Créer le rôle",
+      "update": "Mettre à jour",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Rôle créé avec succès !",
+      "updateSuccess": "Rôle mis à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "slug-exists": "Un rôle avec ce slug existe déjà.",
+        "create-error": "Échec de la création du rôle. Veuillez réessayer.",
+        "update-error": "Échec de la mise à jour. Veuillez réessayer.",
+        "not-found": "Rôle introuvable.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    },
+    "delete": {
+      "title": "Supprimer le rôle",
+      "subtitle": "Supprimer définitivement ce rôle du système.",
+      "button": "Supprimer le rôle",
+      "confirm": "Oui, supprimer",
+      "cancel": "Annuler",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer le rôle \"{name}\" ? Cette action est irréversible.",
+      "cannotDeleteOne": "Ce rôle ne peut pas être supprimé car il est utilisé par {count} client.",
+      "cannotDeleteMany": "Ce rôle ne peut pas être supprimé car il est utilisé par {count} clients.",
+      "successMessage": "Rôle supprimé avec succès !",
+      "errorMessage": "Échec de la suppression du rôle. Veuillez réessayer.",
+      "errors": {
+        "not-found": "Rôle introuvable.",
+        "has-clients": "Impossible de supprimer un rôle assigné à des clients.",
+        "delete-error": "Échec de la suppression. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission de supprimer des rôles."
+      }
+    }
+  },
+  "categories": {
+    "title": "Catégories",
+    "subtitle": "Gérer les catégories de produits et leurs traductions.",
+    "createNew": "Créer une nouvelle catégorie",
+    "noCategories": "Aucune catégorie trouvée. Créez votre première catégorie pour commencer.",
+    "productCount": "Produits",
+    "description": "Description",
+    "view": "Voir",
+    "viewDetails": "Voir les détails",
+    "backToList": "Retour aux catégories",
+    "create": {
+      "title": "Créer une catégorie",
+      "subtitle": "Ajouter une nouvelle catégorie de produits au système."
+    },
+    "edit": {
+      "title": "Modifier la catégorie",
+      "subtitle": "Mettre à jour les informations de la catégorie."
+    },
+    "detail": {
+      "title": "Détails de la catégorie",
+      "subtitle": "Voir les informations de la catégorie.",
+      "name": "Nom",
+      "description": "Description"
+    },
+    "products": {
+      "title": "Produits dans cette catégorie",
+      "subtitle": "Il {count, plural, =1 {y a # produit} other {y a # produits}} dans cette catégorie.",
+      "table": {
+        "sku": "SKU",
+        "name": "Nom",
+        "price": "Prix",
+        "unit": "Unité",
+        "status": "Statut",
+        "active": "Actif",
+        "inactive": "Inactif",
+        "actions": "Actions",
+        "edit": "Modifier"
+      }
+    },
+    "form": {
+      "title": "Informations de la catégorie",
+      "subtitle": "Remplissez les détails de la catégorie dans toutes les langues prises en charge.",
+      "name": {
+        "fr": "Nom (français)",
+        "nl": "Nom (néerlandais)",
+        "en": "Nom (anglais)"
+      },
+      "description": {
+        "fr": "Description (français)",
+        "nl": "Description (néerlandais)",
+        "en": "Description (anglais)"
+      },
+      "create": "Créer la catégorie",
+      "update": "Mettre à jour",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Catégorie créée avec succès !",
+      "updateSuccess": "Catégorie mise à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "create-error": "Échec de la création de la catégorie. Veuillez réessayer.",
+        "update-error": "Échec de la mise à jour. Veuillez réessayer.",
+        "not-found": "Catégorie introuvable.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    },
+    "delete": {
+      "title": "Supprimer la catégorie",
+      "subtitle": "Supprimer définitivement cette catégorie du système.",
+      "button": "Supprimer la catégorie",
+      "confirm": "Oui, supprimer",
+      "cancel": "Annuler",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer la catégorie \"{name}\" ? Cette action est irréversible.",
+      "cannotDeleteOne": "Cette catégorie ne peut pas être supprimée car elle est utilisée par {count} produit.",
+      "cannotDeleteMany": "Cette catégorie ne peut pas être supprimée car elle est utilisée par {count} produits.",
+      "successMessage": "Catégorie supprimée avec succès !",
+      "errorMessage": "Échec de la suppression de la catégorie. Veuillez réessayer.",
+      "errors": {
+        "not-found": "Catégorie introuvable.",
+        "has-products": "Impossible de supprimer une catégorie assignée à des produits.",
+        "delete-error": "Échec de la suppression. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission de supprimer des catégories."
+      }
+    }
+  },
+  "employeeClients": {
+    "title": "Gestion des clients",
+    "subtitle": "Gérer les comptes clients et leurs informations.",
+    "createNew": "Créer un nouveau client",
+    "noClients": "Aucun client trouvé. Créez votre premier client pour commencer.",
+    "search": {
+      "placeholder": "Rechercher des clients par nom, email ou entreprise..."
+    },
+    "filters": {
+      "searchPlaceholder": "Rechercher des clients par nom, email, entreprise ou rôle...",
+      "roleLabel": "Rôle",
+      "allRoles": "Tous les rôles"
+    },
+    "backToList": "Retour aux clients",
+    "create": {
+      "title": "Créer un client",
+      "subtitle": "Ajouter un nouveau compte client au système."
+    },
+    "edit": {
+      "title": "Modifier le client",
+      "subtitle": "Mettre à jour les informations et paramètres du client."
+    },
+    "form": {
+      "title": "Informations client",
+      "subtitle": "Remplissez les détails du client. Un email sera envoyé pour configurer le mot de passe.",
+      "email": {
+        "label": "E-mail",
+        "description": "Utilisé pour la connexion. Un email de configuration du mot de passe sera envoyé.",
+        "descriptionEdit": "L'e-mail ne peut pas être modifié après création."
+      },
+      "companyName": {
+        "label": "Nom de l'entreprise"
+      },
+      "contactName": {
+        "label": "Nom du contact"
+      },
+      "contactPhone": {
+        "label": "Téléphone"
+      },
+      "contactMobile": {
+        "label": "Mobile"
+      },
+      "role": {
+        "label": "Rôle client",
+        "placeholder": "Sélectionner un rôle"
+      },
+      "remise": {
+        "label": "Remise (%)",
+        "description": "Pourcentage de remise appliqué aux prix de base."
+      },
+      "preferredLocale": {
+        "label": "Langue préférée"
+      },
+      "tvaNumber": {
+        "label": "Numéro de TVA"
+      },
+      "billingAddress": {
+        "title": "Adresse de facturation",
+        "street": "Rue",
+        "city": "Ville",
+        "postalCode": "Code postal",
+        "country": "Pays",
+        "different": "L'adresse de facturation est différente de l'adresse de livraison",
+        "differentDescription": "Cochez cette case si l'adresse de facturation diffère de l'adresse de livraison"
+      },
+      "shippingAddress": {
+        "title": "Adresse de livraison",
+        "street": "Rue",
+        "city": "Ville",
+        "postalCode": "Code postal",
+        "country": "Pays"
+      },
+      "deliveryDays": {
+        "label": "Jours de livraison",
+        "description": "Sélectionnez les jours de livraison pour ce client. Par défaut depuis le rôle si non spécifié.",
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
+      },
+      "create": "Créer le client",
+      "update": "Mettre à jour",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Client créé avec succès ! Un email de configuration du mot de passe a été envoyé.",
+      "updateSuccess": "Client mis à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "email-exists": "Un compte avec cet e-mail existe déjà.",
+        "role-not-found": "Rôle sélectionné introuvable.",
+        "user-creation-error": "Échec de la création du compte utilisateur. Veuillez réessayer.",
+        "client-creation-error": "Échec de la création du profil client. Veuillez réessayer.",
+        "not-found": "Client introuvable.",
+        "update-error": "Échec de la mise à jour. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    },
+    "table": {
+      "company": "Entreprise",
+      "contact": "Contact",
+      "role": "Rôle",
+      "email": "E-mail",
+      "created": "Créé",
+      "actions": "Actions",
+      "view": "Voir",
+      "edit": "Modifier"
+    },
+    "detail": {
+      "title": "Détails du client",
+      "subtitle": "Consulter les informations du client.",
+      "info": {
+        "title": "Informations client",
+        "created": "Créé",
+        "role": "Rôle",
+        "deliveryDays": "Jours de livraison",
+        "remise": "Remise"
+      }
+    },
+    "delete": {
+      "title": "Supprimer le client",
+      "subtitle": "Supprimez définitivement ce client du système.",
+      "button": "Supprimer le client",
+      "confirmDelete": "Confirmer la suppression",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer le client \"{name}\" ? Cette action est irréversible.",
+      "cannotDelete": "Ce client ne peut pas être supprimé car {count, plural, =1 {# commande existe} other {# commandes existent}}.",
+      "cancel": "Annuler"
+    }
+  },
+  "employeeRoles": {
+    "title": "Rôles employés",
+    "subtitle": "Gérez les rôles d'employés et leurs permissions.",
+    "createNew": "Créer un nouveau rôle",
+    "noRoles": "Aucun rôle d'employé trouvé. Créez votre premier rôle pour commencer.",
+    "employees": "Employés",
+    "permissions": "Permissions",
+    "legend": "Permissions disponibles pouvant être assignées aux rôles d'employés.",
+    "viewDetails": "Voir les détails",
+    "backToList": "Retour aux rôles",
+    "create": {
+      "title": "Créer un rôle d'employé",
+      "subtitle": "Ajoutez un nouveau rôle d'employé au système."
+    },
+    "edit": {
+      "title": "Modifier le rôle d'employé",
+      "subtitle": "Mettez à jour les détails et les permissions du rôle."
+    },
+    "delete": {
+      "title": "Supprimer le rôle d'employé",
+      "subtitle": "Supprimez définitivement ce rôle du système.",
+      "button": "Supprimer le rôle",
+      "confirmDelete": "Confirmer la suppression",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer le rôle \"{name}\" ? Cette action est irréversible.",
+      "cannotDelete": "Ce rôle ne peut pas être supprimé car {count, plural, =1 {# employé lui est} other {# employés lui sont}} assigné(s).",
+      "cancel": "Annuler",
+      "successMessage": "Rôle d'employé supprimé avec succès !",
+      "errorMessage": "Échec de la suppression du rôle d'employé. Veuillez réessayer."
+    },
+    "form": {
+      "title": "Informations du rôle",
+      "subtitle": "Remplissez les détails du rôle dans toutes les langues prises en charge.",
+      "name": {
+        "fr": "Nom (Français)",
+        "nl": "Nom (Néerlandais)",
+        "en": "Nom (Anglais)"
+      },
+      "permissions": {
+        "label": "Permissions",
+        "description": "Sélectionnez les permissions pour ce rôle.",
+        "manage_settings": "Gérer les paramètres",
+        "manage_client_roles": "Gérer les rôles clients",
+        "manage_employee_roles": "Gérer les rôles d'employés",
+        "view_clients": "Voir les clients",
+        "manage_clients": "Gérer les clients",
+        "manage_employees": "Gérer les employés",
+        "manage_products": "Gérer les produits",
+        "view_products": "Voir les produits",
+        "view_orders": "Voir les commandes",
+        "manage_orders": "Gérer les commandes"
+      },
+      "create": "Créer le rôle",
+      "update": "Mettre à jour le rôle",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Rôle créé avec succès.",
+      "updateSuccess": "Rôle mis à jour avec succès.",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "create-error": "Échec de la création du rôle. Veuillez réessayer.",
+        "not-found": "Rôle introuvable.",
+        "update-error": "Échec de la mise à jour du rôle. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    }
+  },
+  "employeeEmployees": {
+    "title": "Gestion des employés",
+    "subtitle": "Gérez les comptes employés et leurs informations.",
+    "createNew": "Créer un nouvel employé",
+    "noEmployees": "Aucun employé trouvé. Créez votre premier employé pour commencer.",
+    "search": {
+      "placeholder": "Rechercher des employés par nom, email ou rôle..."
+    },
+    "filters": {
+      "searchPlaceholder": "Rechercher des employés par nom, email ou rôle...",
+      "roleLabel": "Rôle",
+      "allRoles": "Tous les rôles"
+    },
+    "backToList": "Retour aux employés",
+    "create": {
+      "title": "Créer un employé",
+      "subtitle": "Ajouter un nouveau compte employé au système."
+    },
+    "edit": {
+      "title": "Modifier l'employé",
+      "subtitle": "Mettre à jour les informations et paramètres de l'employé."
+    },
+    "form": {
+      "title": "Informations de l'employé",
+      "subtitle": "Remplissez les détails de l'employé. Un email sera envoyé pour configurer son mot de passe.",
+      "email": {
+        "label": "Email",
+        "description": "Utilisé pour la connexion. Un email de configuration du mot de passe sera envoyé.",
+        "descriptionEdit": "L'email ne peut pas être modifié après la création."
+      },
+      "fullName": {
+        "label": "Nom complet"
+      },
+      "role": {
+        "label": "Rôle employé",
+        "placeholder": "Sélectionner un rôle"
+      },
+      "create": "Créer l'employé",
+      "update": "Mettre à jour l'employé",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Employé créé avec succès ! Un email de configuration du mot de passe a été envoyé.",
+      "updateSuccess": "Employé mis à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "email-exists": "Un compte avec cet email existe déjà.",
+        "role-not-found": "Rôle sélectionné introuvable.",
+        "user-creation-error": "Échec de la création du compte utilisateur. Veuillez réessayer.",
+        "employee-creation-error": "Échec de la création du profil employé. Veuillez réessayer.",
+        "not-found": "Employé introuvable.",
+        "update-error": "Échec de la mise à jour de l'employé. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    },
+    "table": {
+      "name": "Nom",
+      "role": "Rôle",
+      "email": "Email",
+      "created": "Créé",
+      "actions": "Actions",
+      "view": "Voir"
+    },
+    "delete": {
+      "title": "Supprimer l'employé",
+      "subtitle": "Supprimez définitivement cet employé du système.",
+      "button": "Supprimer l'employé",
+      "confirmDelete": "Confirmer la suppression",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer l'employé \"{name}\" ? Cette action est irréversible.",
+      "errorMessage": "Échec de la suppression de l'employé. Veuillez réessayer.",
+      "cancel": "Annuler"
+    }
+  },
+  "employeeSettings": {
+    "title": "Paramètres de la plateforme",
+    "subtitle": "Configurez les paramètres globaux de la plateforme tels que les heures limites de commande et les permissions disponibles.",
+    "form": {
+      "title": "Paramètres",
+      "subtitle": "Mettre à jour la configuration globale de la plateforme.",
+      "cutoffTime": {
+        "label": "Heure limite de commande",
+        "description": "Heure de la journée à laquelle les commandes doivent être passées (format: HH:mm). Les commandes passées après cette heure seront programmées pour le prochain cycle de livraison."
+      },
+      "cutoffDayOffset": {
+        "label": "Décalage du jour limite",
+        "description": "Nombre de jours avant la livraison où les commandes doivent être passées. Par exemple, si défini à 1, les commandes doivent être passées 1 jour avant la date de livraison."
+      },
+      "defaultLocale": {
+        "label": "Langue par défaut",
+        "description": "Langue par défaut de la plateforme lorsqu'aucune préférence utilisateur n'est définie."
+      },
+      "vatRate": {
+        "label": "Taux de TVA (%)",
+        "description": "Taux de TVA en pourcentage (ex: 21 pour 21% de TVA)."
+      },
+      "availableLocales": {
+        "label": "Langues disponibles",
+        "description": "Sélectionnez les langues disponibles pour les utilisateurs."
+      },
+      "permissions": {
+        "label": "Permissions disponibles",
+        "description": "Sélectionnez les permissions disponibles pour l'attribution aux rôles d'employés. Les permissions non cochées ne seront pas disponibles lors de la création ou de la modification des rôles d'employés.",
+        "manage_settings": "Gérer les paramètres",
+        "manage_client_roles": "Gérer les rôles clients",
+        "manage_employee_roles": "Gérer les rôles employés",
+        "view_clients": "Voir les clients",
+        "manage_clients": "Gérer les clients",
+        "manage_employees": "Gérer les employés",
+        "manage_products": "Gérer les produits",
+        "view_products": "Voir les produits",
+        "view_orders": "Voir les commandes",
+        "manage_orders": "Gérer les commandes"
+      },
+      "units": {
+        "label": "Unités disponibles",
+        "description": "Sélectionnez les unités de mesure disponibles pour les produits. Les unités non cochées ne seront pas disponibles lors de la création ou de la modification de produits."
+      },
+      "update": "Mettre à jour les paramètres",
+      "updating": "Mise à jour...",
+      "updateSuccess": "Paramètres mis à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "update-error": "Échec de la mise à jour des paramètres. Veuillez réessayer.",
+        "unauthorized": "Vous n'avez pas la permission de gérer les paramètres."
+      }
+    }
+  },
+  "employeeProducts": {
+    "title": "Produits",
+    "subtitle": "Gérer le catalogue de produits, les prix et la visibilité.",
+    "createNew": "Créer un nouveau produit",
+    "noProducts": "Aucun produit trouvé. Créez votre premier produit pour commencer.",
+    "search": {
+      "placeholder": "Rechercher des produits par nom, SKU ou catégorie..."
+    },
+    "filters": {
+      "searchPlaceholder": "Rechercher des produits par nom, SKU ou catégorie...",
+      "categoryLabel": "Catégorie",
+      "allCategories": "Toutes les catégories",
+      "statusLabel": "Statut",
+      "allStatuses": "Tous les statuts",
+      "status": {
+        "active": "Actif",
+        "inactive": "Inactif"
+      },
+      "sortLabel": "Trier par",
+      "sort": {
+        "createdDesc": "Plus récents",
+        "nameAsc": "Nom A → Z",
+        "nameDesc": "Nom Z → A",
+        "priceAsc": "Prix : du plus bas au plus élevé",
+        "priceDesc": "Prix : du plus élevé au plus bas"
+      }
+    },
+    "backToList": "Retour aux produits",
+    "create": {
+      "title": "Créer un produit",
+      "subtitle": "Ajouter un nouveau produit au catalogue."
+    },
+    "edit": {
+      "title": "Modifier le produit",
+      "subtitle": "Mettre à jour les informations et paramètres du produit."
+    },
+    "detail": {
+      "title": "Détails du produit",
+      "subtitle": "Voir les informations du produit.",
+      "name": "Nom",
+      "description": "Description"
+    },
+    "form": {
+      "title": "Informations du produit",
+      "subtitle": "Remplissez les détails du produit dans toutes les langues prises en charge.",
+      "sku": {
+        "label": "SKU",
+        "description": "Code ou identifiant du produit (optionnel)."
+      },
+      "category": {
+        "label": "Catégorie",
+        "placeholder": "Sélectionner une catégorie"
+      },
+      "name": {
+        "fr": "Nom (français)",
+        "nl": "Nom (néerlandais)",
+        "en": "Nom (anglais)"
+      },
+      "description": {
+        "fr": "Description (français)",
+        "nl": "Description (néerlandais)",
+        "en": "Description (anglais)"
+      },
+      "basePrice": {
+        "label": "Prix de base",
+        "description": "Prix par kg en euros (même si l'unité est pièce, boîte, etc.)."
+      },
+      "unit": {
+        "label": "Unité",
+        "description": "Unité de mesure (ex. : kg, pièce, boîte, bouquet).",
+        "placeholder": "Sélectionner une unité"
+      },
+      "approximateWeight": {
+        "label": "Poids approximatif",
+        "description": "Poids approximatif en kg (pour les articles vendus à la pièce mais tarifés au poids)."
+      },
+      "imageUrl": {
+        "label": "Image du produit",
+        "description": "Téléchargez une image pour le produit (JPEG, PNG ou WebP, max 5MB).",
+        "uploading": "Téléchargement de l'image...",
+        "remove": "Supprimer l'image"
+      },
+      "visibleTo": {
+        "label": "Visible pour",
+        "description": "Sélectionnez les rôles clients qui peuvent voir ce produit. Laissez tout décoché pour le rendre visible à tous les clients.",
+        "allClients": "Visible pour tous les clients (aucun rôle sélectionné).",
+        "selectedClients": "Visible pour {count} rôle(s) client(s) sélectionné(s)."
+      },
+      "active": {
+        "label": "Actif",
+        "description": "Seuls les produits actifs sont visibles pour les clients."
+      },
+      "create": "Créer le produit",
+      "update": "Mettre à jour",
+      "creating": "Création...",
+      "updating": "Mise à jour...",
+      "cancel": "Annuler",
+      "createSuccess": "Produit créé avec succès !",
+      "updateSuccess": "Produit mis à jour avec succès !",
+      "errors": {
+        "validation-error": "Données du formulaire invalides. Veuillez vérifier vos saisies.",
+        "create-error": "Échec de la création du produit. Veuillez réessayer.",
+        "update-error": "Échec de la mise à jour. Veuillez réessayer.",
+        "not-found": "Produit introuvable.",
+        "unauthorized": "Vous n'avez pas la permission d'effectuer cette action."
+      }
+    },
+    "delete": {
+      "title": "Supprimer le produit",
+      "subtitle": "Supprimez définitivement ce produit du catalogue.",
+      "button": "Supprimer le produit",
+      "confirmDelete": "Confirmer la suppression",
+      "deleting": "Suppression...",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer le produit \"{name}\" ? Cette action est irréversible.",
+      "cannotDelete": "Ce produit ne peut pas être supprimé car {count, plural, =1 {# commande l'utilise} other {# commandes l'utilisent}}.",
+      "cancel": "Annuler"
+    },
+    "table": {
+      "image": "Image",
+      "sku": "SKU",
+      "name": "Nom",
+      "category": "Catégorie",
+      "price": "Prix",
+      "unit": "Unité",
+      "status": "Statut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "actions": "Actions",
+      "edit": "Modifier",
+      "view": "Voir"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Entrez vos identifiants pour accéder à votre compte.",
+      "emailLabel": "E-mail",
+      "passwordLabel": "Mot de passe",
+      "submit": "Se connecter",
+      "loading": "Connexion en cours...",
+      "forgotPassword": "Mot de passe oublié ?",
+      "errors": {
+        "invalidCredentials": "Impossible de trouver un compte avec ces identifiants.",
+        "unknown": "Une erreur est survenue. Veuillez réessayer."
+      }
+    },
+    "setPassword": {
+      "title": "Définir votre mot de passe",
+      "subtitle": "Créez un mot de passe sécurisé pour votre compte",
+      "passwordLabel": "Mot de passe",
+      "confirmPasswordLabel": "Confirmer le mot de passe",
+      "submit": "Définir le mot de passe",
+      "submitting": "Définition du mot de passe…",
+      "verifying": "Vérification du lien d'invitation…",
+      "errors": {
+        "invalidLink": "Lien d'invitation invalide ou expiré. Veuillez contacter le support.",
+        "updateFailed": "Échec de la définition du mot de passe. Veuillez réessayer.",
+        "unknown": "Une erreur s'est produite. Veuillez réessayer."
+      }
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+      "forgotPassword": "Mot de passe oublié ?",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "Votre adresse e-mail",
+      "description": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+      "submit": "Envoyer le lien",
+      "sending": "Envoi en cours...",
+      "cancel": "Annuler",
+      "backToLogin": "Retour à la connexion",
+      "successMessage": "Si un compte existe avec cette adresse e-mail, un lien de réinitialisation a été envoyé. Vérifiez votre boîte de réception.",
+      "errorMessage": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "unauthorized": {
+    "title": "Accès non autorisé",
+    "description": "Vous n'avez pas la permission d'accéder à cette ressource. Veuillez contacter un administrateur si vous pensez qu'il s'agit d'une erreur.",
+    "backToDashboard": "Retour au tableau de bord"
+  }
+}
+
