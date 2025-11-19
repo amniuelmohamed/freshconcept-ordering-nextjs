@@ -7,11 +7,16 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const locale = await requestLocale;
   
   // Get default locale from settings, fallback to hardcoded default
+  // During static generation, settings may not be accessible (no cookies)
   let defaultLocaleFromSettings: string;
   try {
     defaultLocaleFromSettings = await getDefaultLocale();
   } catch (error) {
-    console.error("Error fetching default locale from settings:", error);
+    // During build/static generation, this is expected - use fallback
+    // Only log as warning to reduce noise during build
+    if (process.env.NODE_ENV === "development") {
+      console.warn("Could not fetch default locale from settings during build, using fallback:", error);
+    }
     defaultLocaleFromSettings = fallbackLocale;
   }
 

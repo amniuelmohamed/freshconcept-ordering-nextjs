@@ -28,10 +28,22 @@ export default async function LocaleLayout({
 
   // Enforce available_locales from settings at layout level as an extra safety net.
   // If the requested locale is not available, redirect to a safe fallback.
-  const [availableLocales, defaultLocale] = await Promise.all([
-    getAvailableLocalesArray(),
-    getDefaultLocale(),
-  ]);
+  // Use try/catch to handle cases where settings can't be accessed during static generation
+  let availableLocales: string[];
+  let defaultLocale: string;
+  
+  try {
+    [availableLocales, defaultLocale] = await Promise.all([
+      getAvailableLocalesArray(),
+      getDefaultLocale(),
+    ]);
+  } catch (error) {
+    // During static generation, settings may not be accessible (no cookies)
+    // Use fallback values - all locales are available, use hardcoded default
+    console.warn("Could not fetch settings during build, using fallbacks:", error);
+    availableLocales = [...locales];
+    defaultLocale = locales[0];
+  }
 
   if (!availableLocales.includes(locale)) {
     const fallbackLocale =
