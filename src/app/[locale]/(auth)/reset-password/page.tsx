@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
+import { Logo } from "@/components/shared/logo";
 import { requireAnonymous } from "@/lib/auth/session";
 import { getAvailableLocalesArray } from "@/lib/data/settings";
 import type { LocalePageProps } from "@/types/next";
@@ -17,13 +18,9 @@ export default async function ResetPasswordPage({ params }: LocalePageProps) {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center bg-neutral-100 px-4 py-12">
-      {/* Language switcher above card */}
-      <div className="mb-6">
-        <LanguageSwitcher 
-          currentLocale={locale} 
-          availableLocales={availableLocales}
-          variant="light"
-        />
+      {/* Logo */}
+      <div className="mb-8">
+        <Logo size="xl" />
       </div>
       
       {/* Reset password card */}
@@ -44,6 +41,15 @@ export default async function ResetPasswordPage({ params }: LocalePageProps) {
             </Link>
           </Button>
         </div>
+      </div>
+
+      {/* Language switcher below form */}
+      <div className="mt-6">
+        <LanguageSwitcher 
+          currentLocale={locale} 
+          availableLocales={availableLocales}
+          variant="light"
+        />
       </div>
     </div>
   );

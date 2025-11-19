@@ -114,8 +114,8 @@ export function KPICardWithChart({
             </div>
 
             {sparklineData && sparklineData.length > 0 && (
-              <div className="h-12 w-24">
-                <ResponsiveContainer width="100%" height="100%">
+              <div className="h-12 w-24 min-w-[96px] min-h-[48px]">
+                <ResponsiveContainer width={96} height={48}>
                   <AreaChart data={sparklineData}>
                     <defs>
                       <linearGradient id={`gradient-${title}`} x1="0" y1="0" x2="0" y2="1">

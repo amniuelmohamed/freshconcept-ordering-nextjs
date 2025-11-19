@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { defaultLocale } from "@/i18n/routing";
@@ -19,6 +19,26 @@ export const metadata: Metadata = {
   title: "Fresh Concept Ordering Portal",
   description:
     "B2B wholesale ordering platform for Fresh Concept clients and employees.",
+  manifest: "/manifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Fresh Concept",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Fresh Concept Ordering Portal",
+    title: "Fresh Concept Ordering Portal",
+    description:
+      "B2B wholesale ordering platform for Fresh Concept clients and employees.",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#3b82f6",
 };
 
 export default function RootLayout({

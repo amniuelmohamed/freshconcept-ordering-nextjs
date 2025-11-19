@@ -143,10 +143,12 @@ export function DashboardShell({
             <span className="hidden sm:inline">{appName}</span>
           </Link>
           <div className="flex items-center gap-2">
-            <GlobalSearch 
-              locale={locale} 
-              userType={pathname.includes('/employee') ? 'employee' : 'client'} 
-            />
+            <div className="hidden md:block">
+              <GlobalSearch 
+                locale={locale} 
+                userType={pathname.includes('/employee') ? 'employee' : 'client'} 
+              />
+            </div>
             <LanguageSwitcher currentLocale={locale} availableLocales={availableLocales} />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

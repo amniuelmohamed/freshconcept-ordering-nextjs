@@ -27,21 +27,20 @@ type SessionResult = {
   employeeProfile: EmployeeProfile | null;
 };
 
-// Use getSession instead of getUser - it's less expensive and uses cached tokens
+// Use getUser instead of getSession for security - it authenticates with Supabase Auth server
+// getSession reads from cookies which may not be authentic
 const fetchSession = cache(async (): Promise<SessionResult | null> => {
   const supabase = await createClient();
 
-  // Use getSession instead of getUser - it reads from cookies/cache instead of making API call
+  // Use getUser to authenticate the session with Supabase Auth server
   const {
-    data: { session },
+    data: { user },
     error,
-  } = await supabase.auth.getSession();
+  } = await supabase.auth.getUser();
 
-  if (error || !session?.user) {
+  if (error || !user) {
     return null;
   }
-
-  const user = session.user;
 
   const { data: clientProfile } = await supabase
     .from("clients")

@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 
 import { LoginForm } from "@/components/auth/login-form";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
+import { Logo } from "@/components/shared/logo";
 import { requireAnonymous } from "@/lib/auth/session";
 import { getAvailableLocalesArray } from "@/lib/data/settings";
 import type { LocalePageProps } from "@/types/next";
@@ -15,13 +16,9 @@ export default async function LoginPage({ params }: LocalePageProps) {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center bg-neutral-100 px-4 py-12">
-      {/* Language switcher above login card */}
-      <div className="mb-6">
-        <LanguageSwitcher 
-          currentLocale={locale} 
-          availableLocales={availableLocales}
-          variant="light"
-        />
+      {/* Logo */}
+      <div className="mb-8">
+        <Logo size="xl" />
       </div>
       
       {/* Login card */}
@@ -33,6 +30,15 @@ export default async function LoginPage({ params }: LocalePageProps) {
           <p className="text-sm text-neutral-600">{t("subtitle")}</p>
         </div>
         <LoginForm locale={locale} />
+      </div>
+
+      {/* Language switcher below form */}
+      <div className="mt-6">
+        <LanguageSwitcher 
+          currentLocale={locale} 
+          availableLocales={availableLocales}
+          variant="light"
+        />
       </div>
     </div>
   );
