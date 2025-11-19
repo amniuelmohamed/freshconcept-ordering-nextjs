@@ -9,10 +9,10 @@ import { checkPermission } from "@/lib/auth/permissions";
 import { isLocale } from "@/i18n/routing";
 import { getAvailableLocalesArray } from "@/lib/data/settings";
 import { redirect } from "next/navigation";
-import type { LocalePageProps } from "@/types/next";
 
-type EmployeeLayoutProps = LocalePageProps & {
+type EmployeeLayoutProps = {
   children: ReactNode;
+  params: Promise<{ locale: string }>;
 };
 
 export default async function EmployeeLayout({

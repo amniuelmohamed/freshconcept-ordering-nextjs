@@ -8,10 +8,10 @@ import { getSession } from "@/lib/auth/session";
 import { isLocale } from "@/i18n/routing";
 import { getAvailableLocalesArray } from "@/lib/data/settings";
 import { redirect } from "next/navigation";
-import type { LocalePageProps } from "@/types/next";
 
-type ClientLayoutProps = LocalePageProps & {
+type ClientLayoutProps = {
   children: ReactNode;
+  params: Promise<{ locale: string }>;
 };
 
 export default async function ClientLayout({
